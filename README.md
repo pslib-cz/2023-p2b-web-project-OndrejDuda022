@@ -14,6 +14,6 @@ The website **will** consist of 3 pages.
 > 
 
 ## Links
-> You can find the graphical design here: [Figma]([https://www.figma.com/file/AzIwFx8YGn4u2JNtenozYk/Main-Page?type=design&mode=design&t=WDl1YYcFrIBdMwg8-1](https://www.figma.com/file/AzIwFx8YGn4u2JNtenozYk/Main-Page?type=design&node-id=0%3A1&mode=design&t=PSMc8oSMuAVuHmLk-1)https://www.figma.com/file/AzIwFx8YGn4u2JNtenozYk/Main-Page?type=design&node-id=0%3A1&mode=design&t=PSMc8oSMuAVuHmLk-1)
+> You can find the graphical design here: [Figma](https://www.figma.com/file/AzIwFx8YGn4u2JNtenozYk/Main-Page?type=design&node-id=0%3A1&mode=design&t=PSMc8oSMuAVuHmLk-1)
 > 
 > This page **will** be deployed on [Github Pages](#)
