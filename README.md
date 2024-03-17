@@ -10,7 +10,7 @@ The website **will** consist of 3 pages.
 > 
 > __Royal Family Example Page__ - this page **will** be an example of a page showing members of the Royal Family.
 > 
-> __Example Lore page__ - this page **will** be an example of a page about the project's lore. In this case - the kingdom's map.
+> __Example Lore page__ - this page **will** be an example of a page about the project's lore. In this case - the kingdom's brief history.
 > 
 
 ## Links
