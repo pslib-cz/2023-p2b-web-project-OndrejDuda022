@@ -1,0 +1,113 @@
+/*TOOLS*/
+.center-line {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    left: calc(50% - 0.5px);
+    background-color: white;
+    z-index: 10; /*Just a really high number*/
+}
+
+/*COMPONENTS*/
+.img--responsive {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+#home-header {
+    height: 20%;
+    max-height: 900px;
+}
+
+#home-main {
+    background-color: var(--obsidian);
+    border-top: 2px solid var(--silver);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    position: relative;
+}
+
+/*LOGO*/
+.home-main__logo {
+    border: 2px solid var(--silver);
+    border-radius: 50%;
+    position: absolute;
+    --home-main__logo-size: 60vw;
+    width: var(--home-main__logo-size);
+    height: var(--home-main__logo-size);
+    top: calc(0% - ((var(--home-main__logo-size)/100)*75));
+    left: calc(50% - (var(--home-main__logo-size)/2));
+}
+
+.home-main__logo div {
+    position: relative;
+}
+
+.home-main__logo img:first-of-type {
+    border-radius: 50%;
+}
+
+.home-main__logo img:last-of-type {
+    position: absolute;
+    top: 4%;
+}
+/*---------------------------------*/
+
+/*TITLE*/
+.home-main__title {
+    margin-top: 20%;
+    width: 90%;
+}
+
+.home-main__title h1 {
+    text-align: center;
+    margin: 0;
+}
+/*---------------------------------*/
+
+/*NAVIGATION*/
+.home-main__nav menu{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.home-main__nav menu li{
+    display: flex;
+    align-items: center;
+}
+
+.home-main__nav menu li a, .home-main__nav menu li p{
+    text-decoration: none;
+    color: var(--silver);
+    padding: 10px;
+}
+
+.home-main__nav menu li a::after, .home-main__nav menu li p::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--silver);
+}
+
+.home-main__nav menu li a:hover, .home-main__nav menu li p:hover{
+    color: var(--essence);
+    background-color: var(--obsidian-light);
+    border-radius: 5px;
+}
+
+.mini-menu{
+    display: none;
+}
+
+.home-main__nav menu li:has(p):{
+    background-color: aqua;
+}

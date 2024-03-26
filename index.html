@@ -6,26 +6,49 @@
     <title>Obsidianthorn | Home</title>
     <link rel="icon" href="./images/obsidian_crown.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
-    <main>
-        <div class="main-logo">
-            <img src="./images/coat_swordless.png" alt="Obsidianthorn's coat of arms.">
+    <!--<div class="center-line"><p></p></div>-->
+    <header id="home-header">
+        <img class="header__img img--responsive" src="./images/backgrounds/landscape_1.png" alt="The Silver River">
+    </header>
+    <main id="home-main">
+        <div class="home-main__logo">
+            <div>
+                <img class="img--responsive" src="./images/coat_swordless.png" alt="Obsidianthorn's coat of arms.">
+                <img id="home-main__logo__sword" class="img--responsive" src="./images/sword.png" alt="Coat sword">
+            </div>
         </div>
-        <div class="main-title">
+        <div class="home-main__title">
+            <img src="./images/svg/underline.svg" alt="Underline">
             <h1>The Obsidianthorn Kingdom</h1>
+            <img src="./images/svg/underline_2.svg" alt="Underline">
         </div>
-        <nav class="main-nav">
+        <nav class="home-main__nav">
             <menu>
                 <li><a href="#">About</a></li>
-                <li><p>Royality</p></li>
+                <li class="home-main__nav__dropdown"><p>Royality</p>
+                    <div class="mini-menu">
+                        <a href="#">Roderic Obsidianthorn II.</a>
+                        <a href="#">Elani Misthriver</a>
+                        <a href="#">Malachai Obsidianthorn I.</a>
+                    </div>
+                </li>
                 <li><a href="#">History</a></li>
             </menu>
         </nav>
-        <nav class="main-nav">
+        <nav class="home-main__nav">
             <menu>
                 <li><a href="#">Geography</a></li>
-                <li><p>Species</p></li>
+                <li class="home-main__nav__dropdown"><p>Species</p>
+                    <div class="mini-menu">
+                        <a href="#">Humans</a>
+                        <a href="#">Faeries</a>
+                    </div>
+                </li>
                 <li><a href="#">Other</a></li>
             </menu>
         </nav>

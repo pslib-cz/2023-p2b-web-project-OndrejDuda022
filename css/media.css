@@ -1,0 +1,11 @@
+@media screen and (min-width: 700px) and (max-width: 1599px){
+    .home-main__logo {
+        --home-main__logo-size: 40vw;
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .home-main__logo {
+        --home-main__logo-size: 30vw;
+    }
+}
