@@ -10,56 +10,29 @@
     <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/media.css">
 </head>
-<body>
-    <!--<div class="center-line"><p></p></div>-->
+<body id="home-body">
+    <!--<div class="center-line"></div>-->
     <header id="home-header">
-        <img class="header__img img--responsive" src="./images/backgrounds/landscape_1.png" alt="The Silver River">
+        <script>
+            const images = ['./images/backgrounds/landscape_2.png', 
+                            './images/backgrounds/landscape_3.png',
+                            './images/backgrounds/castle_1.png',
+                            './images/backgrounds/landscape_1.png', 
+                        ];
+            let index = 0;
+            setInterval(function() {
+                const imageUrl = 'url(' + images[index] + ')';
+                document.getElementById('home-header').style.backgroundImage = imageUrl;
+                index = (index + 1) % images.length;
+            }, 10000); //čas sekundy*1000
+        </script>
     </header>
     <main id="home-main">
-        <div class="home-main__logo">
-            <div>
-                <img class="img--responsive" src="./images/coat_swordless.png" alt="Obsidianthorn's coat of arms.">
-                <img id="home-main__logo__sword" class="img--responsive" src="./images/sword.png" alt="Coat sword">
-            </div>
-        </div>
-        <div class="home-main__title">
-            <img src="./images/svg/underline.svg" alt="Underline">
-            <h1>The Obsidianthorn Kingdom</h1>
-            <img src="./images/svg/underline_2.svg" alt="Underline">
-        </div>
-        <nav class="home-main__nav">
-            <menu>
-                <li><a href="#">About</a></li>
-                <li class="home-main__nav__dropdown"><p>Royality</p>
-                    <div class="mini-menu">
-                        <a href="#">Roderic Obsidianthorn II.</a>
-                        <a href="#">Elani Misthriver</a>
-                        <a href="#">Malachai Obsidianthorn I.</a>
-                    </div>
-                </li>
-                <li><a href="#">History</a></li>
-            </menu>
-        </nav>
-        <nav class="home-main__nav">
-            <menu>
-                <li><a href="#">Geography</a></li>
-                <li class="home-main__nav__dropdown"><p>Species</p>
-                    <div class="mini-menu">
-                        <a href="#">Humans</a>
-                        <a href="#">Faeries</a>
-                    </div>
-                </li>
-                <li><a href="#">Other</a></li>
-            </menu>
-        </nav>
+
     </main>
-    <footer>
-        <div class="footer__button">
-            <a href="https://github.com/pslib-cz/2023-p2b-web-project-OndrejDuda022">Repository</a>
-        </div>
-        <div class="footer__button">
-            <a href="#">Gallery</a>
-        </div>
+    <footer class="main-footer">
+        <a href="#">Repositary</a>
+        <a href="#">Gallery</a>
     </footer>
 </body>
 </html>
