@@ -13,26 +13,53 @@
 <body id="home-body">
     <!--<div class="center-line"></div>-->
     <header id="home-header">
-        <script>
-            const images = ['./images/backgrounds/landscape_2.png', 
-                            './images/backgrounds/landscape_3.png',
-                            './images/backgrounds/castle_1.png',
-                            './images/backgrounds/landscape_1.png', 
-                        ];
-            let index = 0;
-            setInterval(function() {
-                const imageUrl = 'url(' + images[index] + ')';
-                document.getElementById('home-header').style.backgroundImage = imageUrl;
-                index = (index + 1) % images.length;
-            }, 10000); //čas sekundy*1000
-        </script>
     </header>
     <main id="home-main">
-
+        <img src="./images/svg/triangle.svg" alt="triangle">
+        <div class="home-main__logo">
+            <img src="./images/coat_swordless.png" class="img--responsive" alt="logo">
+            <img src="./images/sword.png" class="img--responsive" alt="logo sword">
+        </div>
+        <div class="home-main__text">
+            <h1>The Obsidianthorn Kingdom</h1>
+            <p>With steel and silver we rule the land.</p>
+        </div>
+        <nav class="home-main__nav">
+            <menu>
+                <li><a href="#">About</a></li>
+                <li>
+                    <p>Royality</p>
+                    <div class="home-main__nav__sub">
+                        <a href="#">King Roderic Obsidianthorn II.</a>
+                        <a href="#">Lady Elani Misthriver</a>
+                        <a href="#">Prince Malachai Obsidianthorn I.</a>
+                    </div>
+                </li>
+                <li><a href="#">History</a></li>
+            </menu>
+        </nav>
+        <nav class="home-main__nav">
+            <menu>
+                <li><a href="#">Geography</a></li>
+                <li>
+                    <p>Species</p>
+                    <div class="home-main__nav__sub">
+                        <a href="#">Humans</a>
+                        <a href="#">Faeries</a>
+                        <a href="#">Beastman</a>
+                    </div>
+                </li>
+                <li><a href="#">Other</a></li>
+            </menu>
+        </nav>
     </main>
     <footer class="main-footer">
         <a href="#">Repositary</a>
         <a href="#">Gallery</a>
     </footer>
+    <canvas id="canvas--particle"></canvas>
+    <script src="./scripts/home_bg_swap.js"></script>
+    <script src="./scripts/mobile_bg_move.js"></script>
+    <script src="./scripts/particle.js"></script>
 </body>
 </html>

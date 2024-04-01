@@ -3,11 +3,15 @@
 
 /*COLOR VARIABLES*/
 :root{
-    --silver: #ececec;
-    --obsidian: #202020;
     --essence: #ff9100;
     --white: #ffffff;
     --black: #000000;
+
+    --silver: #ececec;
+    --silver-dark: #424242;
+
+    --obsidian: #0a0a0a;
+    --obsidian-light: #1a1a1a;
 }
 
 /*SCROLLBAR SETUP*/
@@ -37,4 +41,8 @@ html {
 
 body {
     background-color: var(--silver);
+}
+
+p {
+    margin: 0;
 }
