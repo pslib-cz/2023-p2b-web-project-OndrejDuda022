@@ -1,0 +1,80 @@
+@keyframes load__up {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes load__right {
+    0% {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes load__left {
+    0% {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes load__down {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes load__static {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sword__load {
+    0%, 70% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    80% {
+        opacity: 1;
+    }
+    90% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes logo__stab {
+    0%, 80% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/keyframes.css">
 </head>
 <body id="home-body">
     <!--<div class="center-line"></div>-->
@@ -29,7 +30,7 @@
                 <li><a href="#">About</a></li>
                 <li>
                     <p>Royality</p>
-                    <div class="home-main__nav__sub">
+                    <div class="sub-menu">
                         <a href="#">King Roderic Obsidianthorn II.</a>
                         <a href="#">Lady Elani Misthriver</a>
                         <a href="#">Prince Malachai Obsidianthorn I.</a>
@@ -43,7 +44,7 @@
                 <li><a href="#">Geography</a></li>
                 <li>
                     <p>Species</p>
-                    <div class="home-main__nav__sub">
+                    <div class="sub-menu">
                         <a href="#">Humans</a>
                         <a href="#">Faeries</a>
                         <a href="#">Beastman</a>
@@ -61,5 +62,15 @@
     <script src="./scripts/home_bg_swap.js"></script>
     <script src="./scripts/mobile_bg_move.js"></script>
     <script src="./scripts/particle.js"></script>
+    <script>
+        function updateRowHeight() {
+            var logo = document.querySelector('.home-main__logo');
+            var grid = document.querySelector('#home-main');
+            var logoHeight = logo.offsetHeight;
+            grid.style.gridTemplateRows = (logoHeight / 2) + "px auto";
+        }
+        window.onload = updateRowHeight;
+        window.onresize = updateRowHeight;
+    </script>
 </body>
 </html>

@@ -31,27 +31,25 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--black);
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--essence-dark));
     border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    
+    max-height: 50px;
+    animation: load__down 2s ease;
 }
 
 .main-footer a{
-    color: var(--silver);
-    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 5px;
     border-radius: 10px;
     transition: 0.2s;
 }
 
 .main-footer a:hover{
-    background-color: var(--obsidian-light);
+    color: var(--essence);
 }
 
 .main-footer a:first-child::before{
@@ -65,33 +63,28 @@
 }
 /*-----------------------*/
 
-#home-body{
-    height: 100vh; /*Temporary*/
-    min-width: 400px;
-}
-
-/*-----------------------*/
-
 #home-header{
     background-image: url(../images/backgrounds/landscape_1.png);
-    height: 30%;
-    transition: background 1s ease-in-out;
+    height: 30vh;
+    transition: background 2s ease-in-out;
     background-position: center top;
     background-size: cover;
 }
 
 /*-----------------------*/
 
+
+/*-----------------------*/
+
 #home-main{
-    background-color: var(--obsidian);
     border-top: 2px solid var(--silver);
-    min-height: 200px; /*Temporary*/
     display: grid;
+    gap: 10px;
     grid-template-columns: 1fr;
-    grid-template-rows: 30% auto;
+    /*grid-template-rows: 50% auto;*/ /*Nahrazeno JS*/
     justify-items: center;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 #home-main > img:first-child{
@@ -99,6 +92,8 @@
     width: 80%;
     max-width: 800px;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     pointer-events: none;
 }
 
@@ -111,11 +106,13 @@
     max-width: 500px;
     transform: translateY(-50%);
     position: relative;
+    animation: load__static 1s ease;
 }
 
 .home-main__logo img:first-child{
     border-radius: 50%;
     border: 2px solid var(--silver);
+    animation: logo__stab 2s ease;
 }
 
 .home-main__logo img:nth-child(2){
@@ -123,18 +120,19 @@
     top: 5%;
     left: 0;
     pointer-events: none;
+    animation: sword__load 2s ease;
 }
 
 /*-----------------------*/
 
 .home-main__text{
     padding: 0 10%;
+    animation: load__down 1s ease;
 }
 
 .home-main__text h1{
     font-size: 2rem;
     text-align: center;
-    margin: 0;
 }
 
 .home-main__text h1::after, .home-main__text h1::before{
@@ -149,7 +147,7 @@
 }
 
 .home-main__text p{
-    font-size: 1.5rem;
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -157,25 +155,19 @@
 
 .home-main__nav menu{
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    gap: 5px;
     padding: 0;
     margin: 0;
     list-style: none;
     align-items: center;
 }
 
-.home-main__nav li::after{
-    content: '';
-    display: block;
-    border-bottom: 1px solid var(--silver);
-    margin-top: 5px;
-    width: 100%;
+.home-main__nav:first-of-type menu{
+    animation: load__left 2s ease;
 }
 
-.home-main__nav a{
-    color: var(--silver);
-    text-decoration: none;
+.home-main__nav:last-of-type menu{
+    animation: load__right 2s ease;
 }
 
 .home-main__nav li{
@@ -183,9 +175,32 @@
     transition: 0.2s;
 }
 
+.home-main__nav li::after{
+    content: '';
+    display: block;
+    border-bottom: 3px double var(--silver);
+    margin-top: 5px;
+    width: 100%;
+}
+
+.home-main__nav li {
+    border-radius: 15px;
+}
+
 .home-main__nav li:not(:has(p)):hover{
     background-color: var(--obsidian-light);
-    border-radius: 5px;
+}
+
+.home-main__nav li:has(p):hover{
+    background-color: var(--obsidian-light);
+}
+
+.home-main__nav li:not(:has(p)):hover a{
+    color: var(--essence);
+}
+
+.home-main__nav li:has(p):hover p::before, .home-main__nav li:has(p):hover p::after{
+    color: var(--essence);
 }
 
 .home-main__nav li:has(p){
@@ -200,49 +215,46 @@
     border-radius: 15px 0 0 15px;
 }
 
-.home-main__nav li:has(p):hover{
-    background-color: var(--obsidian-light);
-}
-
-.home-main__nav__sub {
-    display: none;
+.sub-menu {
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     background-color: var(--obsidian-light);
     padding: 10px;
-    width: 120px;
+    transition: 0.2s;
+    top: 0;
+    border-bottom: 1px solid var(--silver);
+    z-index: 1;
 }
 
-.home-main__nav:first-of-type .home-main__nav__sub{
+.home-main__nav:first-of-type .sub-menu{
     border-right: 1px solid var(--silver);
     border-radius: 15px 0 15px 15px;
+    right: 100%;
 }
 
-.home-main__nav:last-of-type .home-main__nav__sub{
+.home-main__nav:last-of-type .sub-menu{
     border-left: 1px solid var(--silver);
     border-radius: 0 15px 15px 15px;
+    left: 100%;
 }
 
-.home-main__nav__sub a{
+.sub-menu a{
     padding: 5px;
 }
 
-.home-main__nav__sub a:hover{
+.sub-menu a:hover{
     background-color: var(--obsidian);
+    color: var(--essence);
     border-radius: 5px;
 }
 
-.home-main__nav:first-of-type li:has(p):hover .home-main__nav__sub {
-    display: flex;
-    right: 100%;
-    top: 0;
-}
-
-.home-main__nav:last-of-type li:has(p):hover .home-main__nav__sub {
-    display: flex;
-    left: 100%;
-    top: 0;
+.home-main__nav li:has(p):hover .sub-menu {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .home-main__nav:first-of-type menu li:has(p) p::before {

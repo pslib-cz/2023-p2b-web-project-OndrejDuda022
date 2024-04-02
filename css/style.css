@@ -3,7 +3,6 @@
 
 /*COLOR VARIABLES*/
 :root{
-    --essence: #ff9100;
     --white: #ffffff;
     --black: #000000;
 
@@ -12,6 +11,9 @@
 
     --obsidian: #0a0a0a;
     --obsidian-light: #1a1a1a;
+
+    --essence: #ff9100;
+    --essence-dark: #8d3d00;
 }
 
 /*SCROLLBAR SETUP*/
@@ -40,9 +42,16 @@ html {
 }
 
 body {
-    background-color: var(--silver);
+    background: linear-gradient(var(--obsidian) 70%, var(--obsidian-light));
+    min-width: 400px;
+    min-height: 100vh;
 }
 
-p {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+}
+
+a {
+    color: var(--silver);
+    text-decoration: none;
 }

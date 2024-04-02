@@ -1,3 +1,83 @@
 @media screen and (min-width: 1200px){
+    #home-header{
+        height: 40vh;
+    }
 
+    .home-main__text h1{
+        font-size: 3rem;
+    }
+
+    .home-main__text h1::after, .home-main__text h1::before{
+        content: url('../images/svg/underline_3.svg');
+    }
+
+    .home-main__text h1::before{
+        rotate: 0deg;
+        width: calc(100% + 100px);
+        transform: translateX(-50px);
+    }
+
+    .home-main__text h1::after{
+        margin-top: 10px;
+    }
+
+    .home-main__text p{
+        font-size: 2em;
+    }
+
+    .home-main__nav{
+        top: -250px;
+    }
+
+    .home-main__nav:first-of-type{
+        position: absolute;
+        left: calc(50% - 350px);
+    }
+
+    .home-main__nav:last-of-type{
+        position: absolute;
+        right: calc(50% - 350px);
+    }
+
+    .home-main__nav menu{
+        flex-direction: column;
+        gap: 20px;
+        height: 250px;
+    }
+
+    .home-main__nav:first-of-type li:first-child{
+        transform: translateX(40px);
+    }
+
+    .home-main__nav:first-of-type li:nth-child(2){
+        transform: translateX(-20px);
+    }
+
+    .home-main__nav:first-of-type li:last-child{
+        transform: translateX(-30px) translateY(10px);
+    }
+
+    .home-main__nav:last-of-type li:first-child{
+        transform: translateX(-40px);
+    }
+
+    .home-main__nav:last-of-type li:nth-child(2){
+        transform: translateX(20px);
+    }
+
+    .home-main__nav:last-of-type li:last-child{
+        transform: translateX(30px) translateY(10px);
+    }
+
+    .home-main__nav li{
+        padding: 15px;
+    }
+
+    .home-main__nav li a, .home-main__nav li p{
+        font-size: 1.2em;
+    }
+
+    .sub-menu{
+        width: 200px;
+    }
 }
