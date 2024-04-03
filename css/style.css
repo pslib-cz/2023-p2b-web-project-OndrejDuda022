@@ -11,9 +11,15 @@
 
     --obsidian: #0a0a0a;
     --obsidian-light: #1a1a1a;
+    --obsidian-trans: #0a0a0a80;
+    --obsidian-trans-dark: #0a0a0a60;
 
     --essence: #ff9100;
     --essence-dark: #8d3d00;
+
+    --misty-violet: #c7b8ff;
+
+    --royal-silver: #8e8e8e;
 }
 
 /*SCROLLBAR SETUP*/
@@ -44,7 +50,7 @@ html {
 body {
     background: linear-gradient(var(--obsidian) 70%, var(--obsidian-light));
     min-width: 400px;
-    min-height: 100vh;
+    min-height: 100vh; /*Temporary solution, must be fixed later!*/
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -54,4 +60,9 @@ h1, h2, h3, h4, h5, h6, p {
 a {
     color: var(--silver);
     text-decoration: none;
+}
+
+menu{
+    margin: 0;
+    padding: 0;
 }

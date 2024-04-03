@@ -1,6 +1,7 @@
 @media screen and (min-width: 1200px){
     #home-header{
         height: 40vh;
+        background-position: center;
     }
 
     .home-main__text h1{
@@ -79,5 +80,44 @@
 
     .sub-menu{
         width: 200px;
+    }
+
+    .home-main__nav li:not(:has(p)):hover, .home-main__nav li:has(p):hover{
+        background-color: var(--obsidian-trans);
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .sub-menu{
+        width: 350px;
+        background-color: var(--obsidian-trans);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .page-header span:first-child, .menu-activator{
+        display: none;
+    }
+
+    .page-header{
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .desktop-nav{
+        display: inline-block;
+    }
+
+    .desktop-nav menu{
+        display: flex;
+    }
+
+    .menu-cap img:last-of-type{
+        transition: transform 1s;
+    }
+
+    .menu-cap img:last-of-type:hover{
+        transform: rotate(360deg);
     }
 }

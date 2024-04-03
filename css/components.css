@@ -31,7 +31,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--essence-dark));
     border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: space-between;
@@ -61,6 +60,23 @@
     content: url('../images/svg/gallery.svg');
     margin-left: 5px;
 }
+
+#home-footer{
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--essence-dark));
+}
+
+#malachai-footer{
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--essence));
+}
+
+#elani-footer{
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--misty-violet));
+}
+
+#roderic-footer{
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--royal-silver));
+}
+
 /*-----------------------*/
 
 #home-header{
@@ -70,9 +86,6 @@
     background-position: center top;
     background-size: cover;
 }
-
-/*-----------------------*/
-
 
 /*-----------------------*/
 
@@ -121,6 +134,11 @@
     left: 0;
     pointer-events: none;
     animation: sword__load 2s ease;
+    transition: .2s;
+}
+
+.home-main__logo:hover img:nth-child(2){
+    transform: translateY(-20px);
 }
 
 /*-----------------------*/
@@ -187,11 +205,7 @@
     border-radius: 15px;
 }
 
-.home-main__nav li:not(:has(p)):hover{
-    background-color: var(--obsidian-light);
-}
-
-.home-main__nav li:has(p):hover{
+.home-main__nav li:not(:has(p)):hover, .home-main__nav li:has(p):hover{
     background-color: var(--obsidian-light);
 }
 
@@ -267,4 +281,183 @@
     margin-left: 5px;
 }
 
+/*-----------------------*/
 
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    background-color: var(--obsidian-trans);
+    margin-bottom: 50px;
+}
+
+.page-header span{
+    font-size: 1.2em;
+}
+
+.menu-activator{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.page-header__menu{
+    position: absolute;
+    width: 45%;
+    max-width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 5px;
+    background-color: var(--obsidian);
+    top: calc(-1* var(--menu-height));
+    transition: 0.5s ease-in-out;
+}
+
+.page-header:has(.menu-activator.active) .page-header__menu{
+    top:0;
+}
+
+.page-header:has(.menu-activator.active) .menu-cap img:first-of-type{
+    top:var(--menu-height); 
+}
+
+.page-header:has(.menu-activator.active) .menu-cap img:last-of-type{
+    top: calc(var(--menu-height) + 10px);
+    rotate: 540deg;
+}
+
+.menu-cap img:first-of-type{
+    position: absolute;
+    top: 0;
+    max-width: 250px;
+    width: 45%;
+    left: calc(50% - var(--menu-width)/2);
+    transition: 0.5s ease-in-out;
+}
+
+.menu-cap img:last-of-type{
+    position: absolute;
+    top: 10px;
+    width: 10%;
+    min-width: 50px;
+    max-width: 80px;
+    border-radius: 50%;
+    border: 1px solid var(--silver);
+    left: calc(50% - var(--crown-width)/2);
+    transition: 0.5s ease-in-out, rotate 1s;
+}
+
+.page-header__menu li:not(.sub-li){
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+.page-header__menu li:not(:has(p)):hover{
+    background-color: var(--obsidian-light);
+}
+
+.page-header__menu li:not(:has(p)):hover a{
+    color: var(--essence);
+}
+
+.sub-li{
+    padding: 0 5px;
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+.sub-li::before{
+    content: '○';
+    margin-right: 5px;
+}
+
+.page-header__menu li:has(p) p{
+    font-weight: bold;
+}
+
+.desktop-nav{
+    display: none;
+    width: 30%;
+}
+
+.desktop-nav menu{
+    display: none;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.desktop-nav li{
+    font-size: 1.5em;
+    padding: 30px 50px;
+}
+
+.desktop-nav li:not(:has(p)):hover{
+    background-color: var(--obsidian-trans-dark);
+}
+
+.desktop-nav li:not(:has(p)):hover a{
+    color: var(--essence);
+}
+
+.desktop-nav li:has(p){
+    position: relative;
+}
+
+.desktop-nav li:has(p)::after{
+    content: '▼';
+    text-align: center;
+    width: 30px;
+    position: absolute;
+    top: 65%;
+    right: calc(50% - 15px);
+}
+
+.desktop-nav li:has(p):hover::after{
+    color: var(--essence);
+}
+
+.page-sub-menu{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 120%;
+    top: 100%;
+    left: -30px;
+    background-color: var(--obsidian-trans);
+    border-radius: 0 0 15px 15px;
+    border-bottom: 1px solid var(--silver);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.2s;
+    padding: 10px;
+}
+
+.desktop-nav li:has(p):hover .page-sub-menu{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.page-sub-menu a{
+    padding: 5px;
+}
+
+.page-sub-menu a:hover{
+    background-color: var(--obsidian-trans-dark);
+    border-radius: 10px;
+    color: var(--essence);
+}
+
+/*-----------------------*/
+
+#malachai-body{
+    background-image: url(../images/backgrounds/forest_3.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
