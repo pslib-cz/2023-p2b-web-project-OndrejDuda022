@@ -77,6 +77,10 @@
     background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--royal-silver));
 }
 
+.idle-footer{
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--silver));
+}
+
 /*-----------------------*/
 
 #home-header{
@@ -364,6 +368,13 @@
 .page-header__menu li:not(:has(p)):hover a{
     color: var(--essence);
 }
+.menu-activator img{
+    transition: 0.5s ease-in-out;
+}
+
+.menu-activator.active img{
+    transform: rotate(90deg);
+}
 
 .sub-li{
     padding: 0 5px;
@@ -445,6 +456,7 @@
 
 .page-sub-menu a{
     padding: 5px;
+    font-size: .8em;
 }
 
 .page-sub-menu a:hover{
@@ -457,6 +469,48 @@
 
 #malachai-body{
     background-image: url(../images/backgrounds/forest_3.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*-----------------------*/
+
+.page-main{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    padding: 10px;
+    margin-bottom: 50px;
+    background-color: var(--obsidian-trans);
+    border-radius: 25px;
+    grid-template-areas: 'header header header header header'
+                         'lore lore lore lore lore'
+                         'lore lore lore lore lore'
+                         'lore lore lore lore lore'
+                         'lore lore lore lore lore';
+}
+
+.main-text{
+    grid-area: header;
+    text-align: center;
+}
+
+/*-----------------------*/
+
+#geo-body{
+    background-image: url(../images/backgrounds/mountain_2.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*-----------------------*/
+
+#gallery-body{
+    background-image: url(../images/backgrounds/wall_5.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
