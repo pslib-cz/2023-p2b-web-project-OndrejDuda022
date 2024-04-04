@@ -485,7 +485,6 @@
     background-image: url(../images/backgrounds/forest_3.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 /*-----------------------*/
@@ -499,7 +498,6 @@
     padding: 10px;
     margin-bottom: 50px;
     background-color: var(--obsidian-trans);
-    border-radius: 25px;
     grid-template-areas: 'header header header header header'
                          'lore lore lore lore lore'
                          'lore lore lore lore lore'
@@ -526,7 +524,6 @@
     background-image: url(../images/backgrounds/mountain_2.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 /*-----------------------*/
@@ -535,5 +532,4 @@
     background-image: url(../images/backgrounds/wall_5.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }

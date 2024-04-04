@@ -1,4 +1,8 @@
 @media screen and (min-width: 1200px){
+    body{
+        background-attachment: fixed;
+    }
+
     #home-header{
         height: 45vh;
         background-position: center;
