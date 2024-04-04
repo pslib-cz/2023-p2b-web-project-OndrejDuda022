@@ -16,4 +16,4 @@ The website **will** consist of 3 pages.
 ## Links
 > You can find the graphical design here: [Figma](https://www.figma.com/file/AzIwFx8YGn4u2JNtenozYk/Main-Page?type=design&node-id=0%3A1&mode=design&t=PSMc8oSMuAVuHmLk-1)
 > 
-> This page **will** be deployed on [Github Pages](https://pslib-cz.github.io/2023-p2b-web-project-OndrejDuda022/)
+> This page is deployed on [Github Pages](https://pslib-cz.github.io/2023-p2b-web-project-OndrejDuda022/)
