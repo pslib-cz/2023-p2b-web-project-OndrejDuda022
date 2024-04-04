@@ -1,6 +1,6 @@
 @media screen and (min-width: 1200px){
     #home-header{
-        height: 40vh;
+        height: 45vh;
         background-position: center;
     }
 
@@ -114,10 +114,10 @@
     }
 
     .menu-cap img:last-of-type{
-        transition: transform 1s;
+        transition: rotate 1s;
     }
 
-    .menu-cap img:last-of-type:hover{
-        transform: rotate(360deg);
+    .menu-cap:has(a:hover) img:last-of-type{
+        rotate: 180deg;
     }
 }

@@ -50,7 +50,7 @@ html {
 body {
     background: linear-gradient(var(--obsidian) 70%, var(--obsidian-light));
     min-width: 400px;
-    min-height: 100vh; /*Temporary solution, must be fixed later!*/
+    min-height: 100vh; /*Subject to discuss*/
 }
 
 h1, h2, h3, h4, h5, h6, p {

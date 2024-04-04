@@ -87,7 +87,7 @@
 
 #home-header{
     background-image: url(../images/backgrounds/landscape_1.png);
-    height: 30vh;
+    height: 300px;
     transition: background 2s ease-in-out;
     background-position: center top;
     background-size: cover;
@@ -359,7 +359,7 @@
     transition: 0.5s ease-in-out, rotate 1s;
 }
 
-/*.menu-cap a{
+.menu-cap a{
     width: var(--crown-width);
     aspect-ratio: 1/1;
     position: absolute;
@@ -368,7 +368,7 @@
     max-width: 80px;
     left: calc(50% - var(--crown-width)/2);
     z-index: 1;
-}*/
+}
 
 .page-header__menu li:not(.sub-li){
     padding: 5px;
@@ -510,6 +510,14 @@
 .main-text{
     grid-area: header;
     text-align: center;
+}
+
+.main-text h1::after{
+    content: url('../images/svg/underline.svg');
+    display: block;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*-----------------------*/
