@@ -352,6 +352,11 @@
     left: 50%;
     transform: translateX(-50%);
     transition: 0.5s ease-in-out;
+    z-index: 1;
+}
+
+#gallery-body .menu-cap img:first-of-type{
+    transform: translateX(-50%) translateY(-2px); /*An unholy fix for which I should be crucified.*/
 }
 
 .menu-cap img:last-of-type{
@@ -364,6 +369,7 @@
     border: 1px solid var(--silver);
     left: calc(50% - var(--crown-width)/2);
     transition: 0.5s ease-in-out, rotate 1s;
+    z-index: 1;
 }
 
 .menu-cap a{
