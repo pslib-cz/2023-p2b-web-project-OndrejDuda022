@@ -380,7 +380,7 @@
     min-width: 50px;
     max-width: 80px;
     left: calc(50% - var(--crown-width)/2);
-    z-index: 1;
+    z-index: 2;
 }
 
 .page-header:has(.menu-activator.active) .menu-cap a{
