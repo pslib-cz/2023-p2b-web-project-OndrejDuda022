@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/keyframes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
 </head>
 <body class="page-body" id="gallery-body">
     <div class="center-line"></div>
@@ -75,10 +76,104 @@
             <h1>Gallery</h1>
             <p>The beauty of our land.</p>
         </div>
+        <div class="page-content" id="gallery-content">
+            <div class="thumbnails thumbnails--land">
+            <h2>Landscape</h2>
+                <figure>
+                    <a href="../images/backgrounds/landscape_1.png">
+                        <img src="../images/backgrounds/landscape_1.png" class="img--responsive" alt="The Silver River">
+                        <div>
+                            <span>The Silver River</span>
+                            <span>Central Lands</span>
+                        </div>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="../images/backgrounds/castle_1.png">
+                        <img src="../images/backgrounds/castle_1.png" class="img--responsive" alt="The Obsidian Fortress">
+                        <div>
+                            <span>The Obsidian Fortress</span>
+                            <span>Capital</span>
+                        </div>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="../images/backgrounds/mountain_2.png">
+                        <img src="../images/backgrounds/mountain_2.png" class="img--responsive" alt="The Northern Dragon Mountains">
+                        <div>
+                            <span>The Northern Dragon mountains</span>
+                            <span>Northern land</span>
+                        </div>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="../images/backgrounds/other/landscape (4).png">
+                        <img src="../images/backgrounds/other/landscape (4).png" class="img--responsive" alt="The Misty Swamplands">
+                        <div>
+                            <span>The Misty Swamplands</span>
+                            <span>West-Eastern Lands</span>
+                        </div>
+                    </a>
+                </figure>
+            </div>
+            <div class="thumbnails thumbnails--royal">
+                <h2>The Royal Family</h2>
+                <figure>
+                    <a href="../images/malachai (64).jpg">
+                        <img src="../images/malachai (64).jpg" id="malachai-portrait" class="img--responsive" alt="Prince Malachai I.">
+                        <div>
+                            <span>Prince Malachai I.</span>
+                            <span>Heir to the Throne</span>
+                        </div>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="../images/elani (13).jpg">
+                        <img src="../images/elani (13).jpg" class="img--responsive" alt="Lady Elani">
+                        <div>
+                            <span>Lady Elani</span>
+                            <span>Queen Consort</span>
+                        </div>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="../images/roderic_9.jpg">
+                        <img src="../images/roderic_9.jpg" class="img--responsive" alt="King Roderic II.">
+                        <div>
+                            <span>King Roderic II.</span>
+                            <span>King of the Obsidianthorn Kingdom</span>
+                        </div>
+                    </a>
+                </figure>
+            </div>
+        </div>
     </main>
     <footer class="main-footer idle-footer">
         <a href="https://github.com/pslib-cz/2023-p2b-web-project-OndrejDuda022" id="gallery-repo">Repositary</a>
     </footer>
+    <script type="module">
+		import lightgallery from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/+esm'
+		import lgThumbnail from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/+esm'
+		import lgPager from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/pager/+esm'	
+		import lgZoom from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/+esm'
+		import lgAutoplay from 'https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/autoplay/+esm'
+
+		lightgallery(document.querySelector('.thumbnails--land'), 
+		{
+			selector: document.querySelectorAll('.thumbnails--land a'),
+			plugins: [lgThumbnail, lgPager, lgZoom, lgAutoplay],
+			slideShowAutoplay: true,
+			slideShowInterval:2000,
+		});
+
+        lightgallery(document.querySelector('.thumbnails--royal'), 
+        {
+            selector: document.querySelectorAll('.thumbnails--royal a'),
+            plugins: [lgThumbnail, lgPager, lgZoom, lgAutoplay],
+            slideShowAutoplay: true,
+            slideShowInterval:2000,
+        });
+	</script>
     <script src="../scripts/mobile_menu_size_watcher.js"></script>
     <script>
         document.querySelector('.menu-activator').addEventListener('click', function() {

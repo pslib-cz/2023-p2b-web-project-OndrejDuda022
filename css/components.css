@@ -93,6 +93,12 @@
     background-size: cover;
 }
 
+#login-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 /*-----------------------*/
 
 #home-main{
@@ -296,11 +302,11 @@
     padding: 20px;
     position: relative;
     background-color: var(--obsidian-trans);
-    margin-bottom: 50px;
+    margin-bottom: 10%;
     animation: load__up 2s ease;
 }
 
-.page-header span{
+.page-header span, .login-header span{
     font-size: 1.2em;
 }
 
@@ -343,7 +349,8 @@
     top: 0;
     max-width: 250px;
     width: 45%;
-    left: calc(50% - var(--menu-width)/2);
+    left: 50%;
+    transform: translateX(-50%);
     transition: 0.5s ease-in-out;
 }
 
@@ -368,6 +375,10 @@
     max-width: 80px;
     left: calc(50% - var(--crown-width)/2);
     z-index: 1;
+}
+
+.page-header:has(.menu-activator.active) .menu-cap a{
+    display: none;
 }
 
 .page-header__menu li:not(.sub-li){
@@ -483,53 +494,212 @@
 
 #malachai-body{
     background-image: url(../images/backgrounds/forest_3.png);
-    background-size: cover;
-    background-position: center;
 }
 
 /*-----------------------*/
 
-.page-main{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    justify-items: center;
-    padding: 10px;
+.page-main {
     margin-bottom: 50px;
-    background-color: var(--obsidian-trans);
-    grid-template-areas: 'header header header header header'
-                         'lore lore lore lore lore'
-                         'lore lore lore lore lore'
-                         'lore lore lore lore lore'
-                         'lore lore lore lore lore';
 }
 
 .main-text{
     grid-area: header;
     text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 5%;
 }
 
-.main-text h1::after{
-    content: url('../images/svg/underline.svg');
+.main-text h1::after, .main-text h1::before{
     display: block;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
+.main-text h1::after{
+    content: url('../images/svg/underline_3.svg');
+}
+
+.main-text h1::before{
+    content: url('../images/svg/underline_3.svg');
+}
+
+.main-text p{
+    font-size: 1.5em;
+}
+
 /*-----------------------*/
 
 #geo-body{
     background-image: url(../images/backgrounds/mountain_2.png);
-    background-size: cover;
-    background-position: center;
 }
 
 /*-----------------------*/
 
 #gallery-body{
     background-image: url(../images/backgrounds/wall_5.png);
-    background-size: cover;
-    background-position: center;
+}
+
+/*-----------------------*/
+
+#login-body{
+    background-image: url(../images/backgrounds/wall_2.png);
+}
+
+.login-header{
+    display: block;
+    padding: 20px;
+    position: relative;
+    background-color: var(--obsidian-trans);
+    margin-bottom: 15%;
+    animation: load__up 2s ease;
+}
+
+.login-header__cap img:first-of-type{
+    position: absolute;
+    top: 0;
+    max-width: 250px;
+    width: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s ease-in-out;
+}
+
+.login-header__cap img:last-of-type{
+    position: absolute;
+    top: 10px;
+    width: 10%;
+    min-width: 50px;
+    max-width: 80px;
+    border-radius: 50%;
+    border: 1px solid var(--silver);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s ease-in-out, rotate 1s;
+}
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    background-color: var(--obsidian-trans);
+}
+
+.login-window {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    background-color: var(--obsidian);
+    padding: 20px;
+    border-radius: 25px;
+    border-right: 2px solid var(--silver);
+    border-left: 2px solid var(--silver);
+    width: 80%;
+    max-width: 400px;
+}
+
+.login-window img{
+    width: 90%;
+}
+
+.login-window img:first-of-type{
+    rotate: 180deg;
+}
+
+.login-window__grid{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-window__grid p{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.login-window__grid form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login-window__grid form label{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.login-window__grid form label:first-of-type::before{
+    content: url('../images/svg/user.svg');
+}
+
+.login-window__grid form label:last-of-type::before{
+    content: url('../images/svg/lock.svg');
+}
+
+/*-----------------------*/
+
+.page-content{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background-color: var(--obsidian-trans);
+    border-top: 1px solid var(--silver);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 10px;
+}
+
+.thumbnails--land figure{
+    border-radius: 10px 10px 5px 5px;
+    overflow: hidden;
+}
+
+.thumbnails--royal figure{
+    border-radius: 5px 5px 10px 10px;
+    overflow: hidden;
+}
+
+#gallery-content h2{
+    text-align: center;
+}
+
+#gallery-content h2::after{
+    content: url('../images/svg/underline.svg');
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+#gallery-content figure {
+    position: relative;
+}
+
+#gallery-content figure div {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--obsidian-trans);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#gallery-content figure div span {
+    padding: 5px;
+    text-align: center;
 }

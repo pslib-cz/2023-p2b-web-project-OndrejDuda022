@@ -51,6 +51,8 @@ body {
     background: linear-gradient(var(--obsidian) 70%, var(--obsidian-light));
     min-width: 400px;
     min-height: 100vh; /*Subject to discuss*/
+    background-size: cover;
+    background-position: center;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -65,4 +67,8 @@ a {
 menu{
     margin: 0;
     padding: 0;
+}
+
+figure{
+    margin: 0;
 }

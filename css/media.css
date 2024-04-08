@@ -89,6 +89,63 @@
     .home-main__nav li:not(:has(p)):hover, .home-main__nav li:has(p):hover{
         background-color: var(--obsidian-trans);
     }
+
+    .login-window {
+        width: 50%;
+        max-width: 800px;
+    }
+
+    .login-window__grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .login-window__grid p{
+        font-size: 1.5em;
+    }
+
+    .main-text{
+        margin-bottom: 2%;
+    }
+
+    .main-text h1{
+        font-size: 3rem;
+    }
+
+    .main-text h1::after, .main-text h1::before{
+        max-width: 1000px;
+    }
+
+    .main-text p{
+        font-size: 2em;
+    }
+
+    #gallery-content{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .thumbnails--royal{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .thumbnails--land{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto repeat(3, 1fr);
+        grid-template-areas: 'title title title' 
+                             'images images images' 
+                             'images images images' 
+                             'images images images';
+    }
+
+    .thumbnails--land h2{
+        grid-area: title;
+    }
+
 }
 
 @media screen and (min-width: 1500px) {

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidianthorn | Login</title>
+    <link rel="icon" href="../images/obsidian_crown.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/keyframes.css">
+    <script>
+        window.onload = function() {
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                window.location.href = '../index.html';
+            });
+        };
+    </script>
+</head>
+<body class="page-body" id="login-body">
+    <div class="center-line"></div>
+    <header class="login-header">
+        <span>Login</span>
+        <div class="login-header__cap">
+            <img src="../images/svg/triangle_solid.svg" alt="menu top">
+            <img src="../images/obsidian_crown.png" alt="crown">
+        </div>
+    </header>
+    <main class="login-main">
+        <div class="login-window">
+            <h1>Enter the Kingdom</h1>
+            <img src="../images/svg/underline_3.svg">
+                <div class="login-window__grid">
+                    <p>You shall not pass. Yet.</p>
+                    <form id="loginForm" action="" method="post">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+            <img src="../images/svg/underline_3.svg">
+        </div>
+    </main>
+    <footer class="main-footer idle-footer">
+        <a href="https://github.com/pslib-cz/2023-p2b-web-project-OndrejDuda022" id="gallery-repo">Repositary</a>
+    </footer>
+</body>
+</html>
