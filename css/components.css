@@ -728,35 +728,73 @@
     grid-template-columns: 74% 22% 4%;
 }
 
-#malachai-species span{
-    transition: 0.2s;
-    font-size: 0;
-    text-align: center;
+#malachai-species div{
+    display: flex;
+    align-items: center;
 }
 
-#malachai-species span:hover{
+#malachai-species div span{
+    transition: 1s;
     font-size: 1em;
+    opacity: 0;
+    text-align: center;
+    pointer-events: none;
+    transform: translateX(-100%);
+    padding: 10px;
+    border-radius: 0 15px 15px 0;
 }
 
-#malachai-species span:nth-of-type(1){
-    background: radial-gradient(circle at center left, var(--essence-light) 60%, var(--essence) 100%);
+#malachai-species div:hover span{
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+    background-color: var(--obsidian-trans);
 }
 
-#malachai-species span:nth-of-type(2){
-    background: radial-gradient(circle at center, var(--royal-silver) 60%, var(--silver-dark) 100%);
+#malachai-species div:nth-of-type(1){
+    /*background: radial-gradient(circle at center left, var(--essence-light) 60%, var(--essence) 100%);*/
+    background-color: var(--essence);
+    border-right: 1px solid var(--silver-dark);
+    z-index: 2;
 }
 
-#malachai-species span:nth-of-type(3){
-    background: radial-gradient(circle at center, var(--misty-violet) 60%, var(--misty-violet-dark) 100%);
+#malachai-species div:nth-of-type(2){
+    background-color: var(--royal-silver);
+    border-right: 1px solid var(--silver-dark);
+    z-index: 1;
+}
+
+#malachai-species div:nth-of-type(3){
+    background-color: var(--misty-violet);
 }
 
 #malachai-content .page-content__container:first-of-type > P:first-of-type{
     color: var(--essence);
 }
 
+#malachai-content .page-content__container:first-of-type > P:nth-of-type(2) {
+    color: var(--royal-silver);
+}
+
+#malachai-content .page-content__container:first-of-type > P:last-of-type {
+    color: var(--misty-violet);
+}
+
 #malachai-content .page-content__container:first-of-type > P:first-of-type::after{
     content: '74%';
     color: var(--silver);
 }
+
+#malachai-content .page-content__container:first-of-type > P:nth-of-type(2):after{
+    content: '22%';
+    color: var(--silver);
+}
+
+#malachai-content .page-content__container:first-of-type > P:last-of-type::after{
+    content: '4%';
+    color: var(--silver);
+}
+
+
 
 
