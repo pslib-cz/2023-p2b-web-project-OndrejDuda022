@@ -302,10 +302,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: relative;
+    position: sticky;
+    top: 0;
     background-color: var(--obsidian-trans);
     margin-bottom: 10%;
     animation: load__up 2s ease;
+    z-index: 1;
 }
 
 .page-header span, .login-header span{
@@ -354,7 +356,6 @@
     left: 50%;
     transform: translateX(-50%);
     transition: 0.5s ease-in-out;
-    z-index: 1;
 }
 
 #gallery-body .menu-cap img:first-of-type{
@@ -663,6 +664,7 @@
     border-top: 1px solid var(--silver);
     border-radius: 15px;
     padding: 20px;
+    position: relative;
 }
 
 .thumbnails {
@@ -714,54 +716,43 @@
     text-align: center;
 }
 
+.page-content__container{
+    transition: 0.2s;
+}
+
+.page-content__container > *:not(h3){
+    margin-left: 10px;
+}
+
+.page-content__container > *:not(:last-child){
+    margin-bottom: 3px;
+}
+
 .grid-graph{
     display: grid;
     grid-template-rows: 25px;
-    border-radius: 1vh;
+    border-radius: 10px;
     border: 2px solid var(--silver-dark);
     width: 90%;
-    margin: 10px;
+    margin: 10px 0;
     overflow: hidden;
+    background-color: var(--obsidian-trans);
+    max-width: 600px;
 }
 
 #malachai-species{
     grid-template-columns: 74% 22% 4%;
 }
 
-#malachai-species div{
-    display: flex;
-    align-items: center;
-}
-
-#malachai-species div span{
-    transition: 1s;
-    font-size: 1em;
-    opacity: 0;
-    text-align: center;
-    pointer-events: none;
-    transform: translateX(-100%);
-    padding: 10px;
-    border-radius: 0 15px 15px 0;
-}
-
-#malachai-species div:hover span{
-    opacity: 1;
-    pointer-events: all;
-    transform: none;
-    background-color: var(--obsidian-trans);
-}
-
 #malachai-species div:nth-of-type(1){
-    /*background: radial-gradient(circle at center left, var(--essence-light) 60%, var(--essence) 100%);*/
-    background-color: var(--essence);
+    background: radial-gradient(circle at center, var(--essence-light) 60%, var(--essence) 100%);
+    /*background-color: var(--essence);*/
     border-right: 1px solid var(--silver-dark);
-    z-index: 2;
 }
 
 #malachai-species div:nth-of-type(2){
     background-color: var(--royal-silver);
     border-right: 1px solid var(--silver-dark);
-    z-index: 1;
 }
 
 #malachai-species div:nth-of-type(3){
@@ -780,21 +771,123 @@
     color: var(--misty-violet);
 }
 
-#malachai-content .page-content__container:first-of-type > P:first-of-type::after{
-    content: '74%';
+#malachai-content .page-content__container p span{
     color: var(--silver);
 }
 
-#malachai-content .page-content__container:first-of-type > P:nth-of-type(2):after{
-    content: '22%';
+#malachai-content .page-content__container h3 span, #geography-content .page-content__container h3 span{
+    font-weight: lighter;
+}
+
+#malachai-magic{
+    grid-template-columns: 90% 10%;
+}
+
+#malachai-magic div:first-of-type{
+    background: linear-gradient(90deg, var(--void) 50%, var(--black) 100%);
+    border-radius: 0 10px 10px 0;
+}
+
+#malachai-content .page-content__container:nth-of-type(2) > P:first-of-type span{
+    color: var(--void-light);
+}
+
+#malachai-content .page-content__container:nth-of-type(2) > P:last-of-type span{
+    color: var(--royal-silver);
+}
+
+#malachai-portrait{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s;
+}
+
+.image-swap {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#malachai-content:has(.image-swap.active) #malachai-portrait{
+    opacity: 1;
+    pointer-events: all;
+}
+
+#malachai-content:has(.image-swap.active) .page-content__container{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#geography-population{
+    grid-template-columns: 90% 6% 4%;
+}
+
+#geography-population div:nth-of-type(1){
+    background-color: var(--royal-silver);
+    border-right: 1px solid var(--silver-dark);
+}
+
+#geography-population div:nth-of-type(2){
+    background-color: var(--forest-green);
+    border-right: 1px solid var(--silver-dark);
+}
+
+#geography-population div:nth-of-type(3){
+    background-color: var(--beast-yellow);
+}
+
+#geography-content .page-content__container:nth-of-type(2) p:first-of-type span{
+    color: var(--rose-crimson);
+}
+
+#geography-content .page-content__container:nth-of-type(2) p:nth-of-type(2) span{
+    color: var(--forest-green);
+}
+
+#geography-content .page-content__container:nth-of-type(2) p:not(:has(span)){
+    color: var(--royal-silver);
+}
+
+#geography-content .page-content__container:nth-of-type(4) p:first-of-type{
+    color: var(--royal-silver);
+}
+
+#geography-content .page-content__container:nth-of-type(4) p:nth-of-type(2){
+    color: var(--forest-green);
+}
+
+#geography-content .page-content__container:nth-of-type(4) p:last-of-type{
+    color: var(--beast-yellow);
+}
+
+#geography-content .page-content__container:nth-of-type(4) p span{
     color: var(--silver);
 }
 
-#malachai-content .page-content__container:first-of-type > P:last-of-type::after{
-    content: '4%';
-    color: var(--silver);
+#geography-content .page-content__container:nth-of-type(5) p::before, #geography-content .page-content__container:nth-of-type(6) p::before{
+    content: '○ ';
 }
 
+#geography-map{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s;
+}
 
+#geography-content:has(.image-swap.active) #geography-map{
+    opacity: 1;
+    pointer-events: all;
+}
 
-
+#geography-content:has(.image-swap.active) .page-content__container{
+    opacity: 0;
+    pointer-events: none;
+}

@@ -71,7 +71,48 @@
     <main class="page-main">
         <div class="main-text">
             <h1>Geography</h1>
-            <p>Location: West of the Known world</p>
+        </div>
+        <div class="page-content" id="geography-content">
+            <h2>Lore</h2>
+            <div class="page-content__container">
+                <h3>Location: <span>West of the Known world</span></h3>
+            </div>
+            <div class="page-content__container">
+                <h3>Surrounded by:</h3>
+                <p>The <span>Crimsonrose</span> kingdom</p>
+                <p>The <span>Eldertrea</span> queendom</p>
+                <p>Northern Dragon Mountains</p>
+                <p>Eastern Dragon Mountains</p>
+                <p>The Grand Lake</p>
+            </div>
+            <div class="page-content__container">
+                <h3>Area: <span>The second largest human kingdom</span></h3>
+            </div>
+            <div class="page-content__container">
+                <h3>Population:</h3>
+                <div class="grid-graph" id="geography-population">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <p>Humans: <span>90%</span></p>
+                <p>Faeries: <span>6%</span></p>
+                <p>Beastman: <span>4%</span></p>
+            </div>
+            <div class="page-content__container">
+                <h3>Geography: </h3>
+                <p>Lowlands - East</p>
+                <p>Highlands - North, West, South</p>
+                <p>Biomes - forests, fields, meadows, swamps, mountains</p>
+            </div>
+            <div class="page-content__container">
+                <h3>Climate:</h3>
+                <p>Mild summers - rainy, misty weather</p>
+                <p>Harsh winters - snowy, cloudy, windy</p>
+                <p>Wet springs, autumns - dense rains, thick fogs, strong winds</p>
+            </div>
+            <img id="geography-map" src="../images/map.png" alt="Map">
+            <img class="image-swap" src="../images/svg/gallery.svg" alt="image_swap">
         </div>
     </main>
     <footer class="main-footer idle-footer">
@@ -81,6 +122,9 @@
     <script src="../scripts/mobile_menu_size_watcher.js"></script>
     <script>
         document.querySelector('.menu-activator').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+        document.querySelector('.image-swap').addEventListener('click', function() {
             this.classList.toggle('active');
         });
     </script>

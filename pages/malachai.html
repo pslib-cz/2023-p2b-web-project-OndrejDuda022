@@ -77,23 +77,27 @@
         <div class="page-content" id="malachai-content">
             <h2>Lore</h2>
             <div class="page-content__container">
-                <h3>Species - Mixed Blood</h3>
+                <h3>Species: <span>Mixed Blood</span></h3>
                 <div class="grid-graph" id="malachai-species">
-                    <div><span>74%</span></div>
-                    <div><span>22%</span></div>
-                    <div><span>4%</span></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-                <p>Dragon Faerie: </p>
-                <p>Human: </p>
-                <p>Other faerie: </p>
+                <p>Dragon Faerie: <span>74%</span></p>
+                <p>Human: <span>22%</span></p>
+                <p>Other faerie: <span>4%</span></p>
             </div>
             <div class="page-content__container">
-                <h3>Magic - S Class</h3>
-                <p>Prominent element(s): Omni-elemental</p>
-                <p>Unique spell: Unknown</p>
+                <h3>Magic: <span>S Class</span></h3>
+                <div class="grid-graph" id="malachai-magic">
+                    <div></div>
+                    <div></div>
+                </div>
+                <p>Prominent element(s): <span>Omni-elemental</span></p>
+                <p>Unique spell: <span>Unknown</span></p>
             </div>
             <div class="page-content__container">
-                <h3>Physical properties</h3>
+                <h3>Physical properties:</h3>
                 <p>Age: 19 years</p>
                 <p>Height: 214 cm (horns included)</p>
                 <p>Weight: 71 kg</p>
@@ -101,19 +105,21 @@
                 <p>Hair color: Black</p>
             </div>
             <div class="page-content__container">
-                <h3>Titles</h3>
+                <h3>Titles:</h3>
                 <p>Prince of the Obsidianthorn Kingdom</p>
                 <p>Heir of the Monarchs (by faeries)</p>
                 <p>Horned Freak (unofficially by commoners)</p>
             </div>
             <div class="page-content__container">
-                <h3>Hobbies</h3>
+                <h3>Hobbies:</h3>
                 <p>Studying magic, history, chess, magic duels, night strolls</p>
             </div>
             <div class="page-content__container">
-                <h3>Incompetencies</h3>
+                <h3>Incompetencies:</h3>
                 <p>Physical combat, socializing</p>
             </div>
+            <img id="malachai-portrait" src="../images/malachai (19)_cut.png" alt="Malachai">
+            <img class="image-swap" src="../images/svg/gallery.svg" alt="image_swap">
         </div>
     </main>
     <footer class="main-footer" id="malachai-footer">
@@ -123,6 +129,9 @@
     <script src="../scripts/mobile_menu_size_watcher.js"></script>
     <script>
         document.querySelector('.menu-activator').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+        document.querySelector('.image-swap').addEventListener('click', function() {
             this.classList.toggle('active');
         });
     </script>
