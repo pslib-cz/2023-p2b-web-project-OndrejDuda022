@@ -553,6 +553,7 @@
 
 #login-body{
     background-image: url(../images/backgrounds/wall_2.png);
+    padding-bottom: 50px;
 }
 
 .login-header{
@@ -560,7 +561,7 @@
     padding: 20px;
     position: relative;
     background-color: var(--obsidian-trans);
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     animation: load__up 2s ease;
 }
 
@@ -591,6 +592,7 @@
     display: flex;
     justify-content: center;
     background-color: var(--obsidian-trans);
+    
 }
 
 .login-window {
@@ -711,3 +713,50 @@
     padding: 5px;
     text-align: center;
 }
+
+.grid-graph{
+    display: grid;
+    grid-template-rows: 25px;
+    border-radius: 1vh;
+    border: 2px solid var(--silver-dark);
+    width: 90%;
+    margin: 10px;
+    overflow: hidden;
+}
+
+#malachai-species{
+    grid-template-columns: 74% 22% 4%;
+}
+
+#malachai-species span{
+    transition: 0.2s;
+    font-size: 0;
+    text-align: center;
+}
+
+#malachai-species span:hover{
+    font-size: 1em;
+}
+
+#malachai-species span:nth-of-type(1){
+    background: radial-gradient(circle at center left, var(--essence-light) 60%, var(--essence) 100%);
+}
+
+#malachai-species span:nth-of-type(2){
+    background: radial-gradient(circle at center, var(--royal-silver) 60%, var(--silver-dark) 100%);
+}
+
+#malachai-species span:nth-of-type(3){
+    background: radial-gradient(circle at center, var(--misty-violet) 60%, var(--misty-violet-dark) 100%);
+}
+
+#malachai-content .page-content__container:first-of-type > P:first-of-type{
+    color: var(--essence);
+}
+
+#malachai-content .page-content__container:first-of-type > P:first-of-type::after{
+    content: '74%';
+    color: var(--silver);
+}
+
+
