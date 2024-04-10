@@ -5,20 +5,22 @@
         align-items: center;
     }
 
+
     #malachai-content{
         grid-template-areas: 'title title title' 
-                             'species species image' 
-                             'magic magic image' 
                              'physic hobbies image'
-                             'titles incompetencies image';
+                             'titles incompetencies image'
+                             'species species image' 
+                             'magic magic image';
     }
 
     #geography-content{
         grid-template-areas: 'title title title' 
                              'data population image' 
                              'geography climate image' 
-                             'neighbours other image';
+                             'neighbours empty image';
     }
+
 
     #malachai-content h2, #geography-content h2{
         grid-area: title;
@@ -27,7 +29,7 @@
     }
 
     #malachai-content h2::after, #geography-content h2::after{
-        content: url('../images/svg/underline.svg');
+        content: url('../images/svg/underline_1.svg');
         display: block;
         width: 40%;
         position: relative;
@@ -35,48 +37,51 @@
         transform: translateX(-50%);
     }
 
-    #malachai-content .page-content__container:nth-of-type(1){
+
+    #malachai-species{
         grid-area: species;
+        margin-left: 10%;
     }
 
-    #malachai-content .page-content__container:nth-of-type(2){
+    #malachai-magic{
         grid-area: magic;
+        margin-left: 10%;
     }
 
-    #malachai-content .page-content__container:nth-of-type(3){
+    #malachai-physique{
         grid-area: physic;
     }
 
-    #malachai-content .page-content__container:nth-of-type(4){
+    #malachai-titles{
         grid-area: titles;
     }
 
-    #malachai-content .page-content__container:nth-of-type(5){
+    #malachai-hobbies{
         grid-area: hobbies;
     }
 
-    #malachai-content .page-content__container:nth-of-type(6){
+    #malachai-incompetencies{
         grid-area: incompetencies;
     }
 
-    
-    #geography-content .page-content__container:nth-of-type(1){
+
+    #geography-data{
         grid-area: data;
     }
     
-    #geography-content .page-content__container:nth-of-type(3){
+    #geography-population{
         grid-area: population;
     }
 
-    #geography-content .page-content__container:nth-of-type(5){
+    #geography-landscape{
         grid-area: geography;
     }
 
-    #geography-content .page-content__container:nth-of-type(4){
+    #geography-climate{
         grid-area: climate;
     }
 
-    #geography-content .page-content__container:nth-of-type(2){
+    #geography-neighbours{
         grid-area: neighbours;
     }
     
@@ -88,28 +93,35 @@
         pointer-events: all;
         transform: none;
         max-height: 700px;
-        justify-self: center;
     }
 
     #geography-map{
         max-width: 100%;
     }
 
+
     .image-swap{
         display: none;
+    }
+
+    .grid-graph{
+        max-width: none;
+    }
+
+    body{
+        background-attachment: fixed;
     }
 
 }
 
 @media screen and (min-width: 1200px){
-    body{
-        background-attachment: fixed;
-    }
 
+    /* Home */
     #home-header{
         height: 45vh;
         background-position: center;
     }
+
 
     .home-main__text h1{
         font-size: 3rem;
@@ -132,6 +144,7 @@
     .home-main__text p{
         font-size: 2em;
     }
+
 
     .home-main__nav{
         top: -250px;
@@ -185,6 +198,7 @@
         font-size: 1.2em;
     }
 
+
     .sub-menu{
         width: 200px;
     }
@@ -193,6 +207,8 @@
         background-color: var(--obsidian-trans);
     }
 
+
+    /* Login */
     .login-window {
         width: 50%;
         max-width: 800px;
@@ -206,22 +222,8 @@
         font-size: 1.5em;
     }
 
-    .main-text{
-        margin-bottom: 2%;
-    }
 
-    .main-text h1{
-        font-size: 3rem;
-    }
-
-    .main-text h1::after, .main-text h1::before{
-        max-width: 1000px;
-    }
-
-    .main-text p{
-        font-size: 1.5em;
-    }
-
+    /* Gallery */
     #gallery-content{
         display: grid;
         grid-template-columns: 30% 70%;
@@ -249,14 +251,34 @@
     }
 
     #malachai-content, #geography-content{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto;
         padding: 20px 15%;
     }
+
+
+    /* General */
+    .main-text{
+        margin-bottom: 2%;
+    }
+
+    .main-text h1{
+        font-size: 3rem;
+    }
+
+    .main-text h1::after, .main-text h1::before{
+        max-width: 1000px;
+    }
+
+    .main-text p{
+        font-size: 1.5em;
+    }
+
 
 
 }
 
 @media screen and (min-width: 1500px) {
+    /* Home */
     .sub-menu{
         width: 350px;
         background-color: var(--obsidian-trans);
@@ -264,6 +286,7 @@
 }
 
 @media screen and (min-width: 1600px) {
+    /* General */
     .page-header span:first-child, .menu-activator{
         display: none;
     }
@@ -298,20 +321,8 @@
     }
 }
 
-/*
-@media screen and (min-width: 1700px) {
-    
-    
-    #malachai-content, #geography-content{
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 20px 25%;
-    }
-    
-}
-
-*/
-
 @media screen and (max-width: 500px){
+    /* General */
     .main-text h1{
         font-size: 1.8rem;
     }

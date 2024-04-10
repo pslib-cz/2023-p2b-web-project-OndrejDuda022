@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obsidianthorn | Malachai</title>
-    <link rel="icon" href="../images/obsidian_crown.png" type="image/x-icon">
+    <link rel="icon" href="../images/webp/obsidian_crown.webp" type="image/x-icon">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/components.css">
@@ -28,7 +28,7 @@
                 <li><a href="#">History</a></li>
             </menu>
         </nav>
-        <nav>
+        <nav class="mobile-nav">
             <menu class="page-header__menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -45,15 +45,10 @@
             </menu>
             <div class="menu-cap">
                 <a href="../index.html"></a>
-                <img src="../images/svg/triangle_solid.svg" alt="menu top">
+                <img src="../images/svg/triangle_solid.svg" alt="menu_top">
                 <img src="../images/webp/obsidian_crown.webp" alt="crown">
-                
             </div>
         </nav>
-        <div class="menu-activator">
-            <img src="../images/svg/burger.svg" alt="burger menu">
-            <span>Menu</span>
-        </div>
         <nav class="desktop-nav">
             <menu>
                 <li><a href="./geography.html">Geography</a></li>
@@ -68,6 +63,10 @@
                 <li><a href="#">Other</a></li>
             </menu>
         </nav>
+        <div class="menu-activator">
+            <img src="../images/svg/burger.svg" alt="burger_menu">
+            <span>Menu</span>
+        </div>
     </header>
     <main class="page-main">
         <div class="main-text">
@@ -76,9 +75,9 @@
         </div>
         <div class="page-content" id="malachai-content">
             <h2>Lore</h2>
-            <div class="page-content__container">
+            <div class="page-content__container" id="malachai-species">
                 <h3>Species: <span>Mixed Blood</span></h3>
-                <div class="grid-graph" id="malachai-species">
+                <div class="grid-graph" id="malachai-species__graph">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -87,34 +86,34 @@
                 <p>Human: <span>22%</span></p>
                 <p>Other faerie: <span>4%</span></p>
             </div>
-            <div class="page-content__container">
+            <div class="page-content__container" id="malachai-magic">
                 <h3>Magic: <span>S Class</span></h3>
-                <div class="grid-graph" id="malachai-magic">
+                <div class="grid-graph" id="malachai-magic__graph">
                     <div></div>
                     <div></div>
                 </div>
                 <p>Prominent element(s): <span>Omni-elemental</span></p>
-                <p>Unique spell: <span>Unknown</span></p>
+                <p>Unique spell: <span>Secret</span></p>
             </div>
-            <div class="page-content__container">
+            <div class="page-content__container" id="malachai-physique">
                 <h3>Physical properties:</h3>
                 <p>Age: 19 years</p>
                 <p>Height: 214 cm (horns included)</p>
-                <p>Weight: 71 kg</p>
-                <p>Eye color: Orange</p>
-                <p>Hair color: Black</p>
+                <p>Weight: 79 kg</p>
+                <p>Eye color: <span>Orange</span></p>
+                <p>Hair color: <span>Black</span></p>
             </div>
-            <div class="page-content__container">
+            <div class="page-content__container" id="malachai-titles">
                 <h3>Titles:</h3>
                 <p>Prince of the Obsidianthorn Kingdom</p>
                 <p>Heir of the Monarchs (by faeries)</p>
                 <p>Horned Freak (unofficially by commoners)</p>
             </div>
-            <div class="page-content__container">
+            <div class="page-content__container" id="malachai-hobbies">
                 <h3>Hobbies:</h3>
-                <p>Studying magic, history, chess, magic duels, night strolls</p>
+                <p>Studying magic, history, chess, night strolls</p>
             </div>
-            <div class="page-content__container">
+            <div class="page-content__container" id="malachai-incompetencies">
                 <h3>Incompetencies:</h3>
                 <p>Physical combat, socializing</p>
             </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obsidianthorn | Geography</title>
-    <link rel="icon" href="../images/obsidian_crown.png" type="image/x-icon">
+    <link rel="icon" href="../images/webp/obsidian_crown.webp" type="image/x-icon">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/components.css">
@@ -29,7 +29,7 @@
                 <li><a href="#">History</a></li>
             </menu>
         </nav>
-        <nav>
+        <nav class="mobile-nav">
             <menu class="page-header__menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -46,14 +46,10 @@
             </menu>
             <div class="menu-cap">
                 <a href="../index.html"></a>
-                <img src="../images/svg/triangle_solid.svg" alt="menu top">
+                <img src="../images/svg/triangle_solid.svg" alt="menu_top">
                 <img src="../images/webp/obsidian_crown.webp" alt="crown">
             </div>
         </nav>
-        <div class="menu-activator">
-            <img src="../images/svg/burger.svg" alt="burger menu">
-            <span>Menu</span>
-        </div>
         <nav class="desktop-nav">
             <menu>
                 <li>
@@ -67,6 +63,10 @@
                 <li><a href="#">Other</a></li>
             </menu>
         </nav>
+        <div class="menu-activator">
+            <img src="../images/svg/burger.svg" alt="burger_menu">
+            <span>Menu</span>
+        </div>
     </header>
     <main class="page-main">
         <div class="main-text">
@@ -74,12 +74,12 @@
         </div>
         <div class="page-content" id="geography-content">
             <h2>Lore</h2>
-            <div class="page-content__container">
+            <div class="page-content__container" id="geography-data">
                 <h3>Location: <span>West of the Known world</span></h3>
                 <h3>Language: <span>3-kind speech</span></h3>
                 <h3>Area: <span>The second largest human kingdom</span></h3>
             </div>
-            <div class="page-content__container">
+            <div class="page-content__container" id="geography-neighbours">
                 <h3>Surrounded by:</h3>
                 <p>The <span>Crimsonrose</span> kingdom</p>
                 <p>The <span>Eldertrea</span> queendom</p>
@@ -87,9 +87,9 @@
                 <p>Eastern Dragon Mountains</p>
                 <p>The Grand Lake</p>
             </div>
-            <div class="page-content__container">
+            <div class="page-content__container" id="geography-population">
                 <h3>Population:</h3>
-                <div class="grid-graph" id="geography-population">
+                <div class="grid-graph" id="geography-population__graph">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -98,13 +98,13 @@
                 <p>Faeries: <span>6%</span></p>
                 <p>Beastman: <span>4%</span></p>
             </div>
-            <div class="page-content__container">
-                <h3>Geography: </h3>
+            <div class="page-content__container" id="geography-landscape">
+                <h3>Landscape: </h3>
                 <p>Lowlands - East</p>
                 <p>Highlands - North, West, South</p>
                 <p>Biomes - forests, fields, meadows, swamps, mountains</p>
             </div>
-            <div class="page-content__container">
+            <div class="page-content__container" id="geography-climate">
                 <h3>Climate:</h3>
                 <p>Mild summers - rainy, misty weather</p>
                 <p>Harsh winters - snowy, cloudy, windy</p>
