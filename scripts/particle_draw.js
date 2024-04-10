@@ -3,7 +3,6 @@ const ctx = canvas.getContext('2d');
 
 let particlesArray;
 
-// get size of window
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -14,20 +13,19 @@ const darkParticlesRarity = 0.5;
 const particleLifeSpan = 300;
 const particleAmount = 50;
 
-// create particles
 class Particle {
     constructor() {
-        this.x = Math.random() * canvas.width; // particle start position
-        this.y = canvas.height; // particle start at bottom of screen
-        this.size = Math.random() * particleSize + 1; // particle size
-        this.speedY = Math.random() * particleSpeed + 1; // particle rise speed
-        this.speedX = Math.random() * 2 - 1; // particle horizontal speed
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height;
+        this.size = Math.random() * particleSize + 1;
+        this.speedY = Math.random() * particleSpeed + 1;
+        this.speedX = Math.random() * 2 - 1;
         let essenceColor = getComputedStyle(document.documentElement).getPropertyValue('--essence').trim();
-        this.color = Math.random() > darkParticlesRarity ? essenceColor : 'black'; // particle color
-        this.particleLifeSpan = Math.random() * particleLifeSpan + particleLifeSpan; // lifespan of the particle
-        this.shrinkRate = this.size / this.particleLifeSpan; // rate at which particle shrinks
+        this.color = Math.random() > darkParticlesRarity ? essenceColor : 'black';
+        this.particleLifeSpan = Math.random() * particleLifeSpan + particleLifeSpan;
+        this.shrinkRate = this.size / this.particleLifeSpan;
     }
-    // method to draw individual particle
+
     draw() {
         ctx.fillStyle = this.color;
         ctx.strokeStyle = this.color;
@@ -37,28 +35,26 @@ class Particle {
         ctx.closePath();
         ctx.fill();
     }
-    // method to move the particle
+    
     update() {
         this.y -= this.speedY;
         this.x += this.speedX;
-        // Change speed and direction over time for more spark-like behavior
         this.speedX += Math.random() * 0.01 - 0.005;
         this.speedY += Math.random() * 0.01 - 0.005;
-        this.size -= this.shrinkRate; // decrease the size of the particle
-        if (this.size < 0) { // if the size is less than 0, reset the particle
+        this.size -= this.shrinkRate;
+        if (this.size < 0) {
             this.y = canvas.height;
             this.x = Math.random() * canvas.width;
             this.size = Math.random() * particleSize + 1;
             this.speedY = Math.random() * particleSpeed + 1;
             this.speedX = Math.random() * 2 - 1;
-            this.particleLifeSpan = Math.random() * particleLifeSpan + particleLifeSpan; // lifespan of the particle
-            this.shrinkRate = this.size / this.particleLifeSpan; // rate at which particle shrinks
+            this.particleLifeSpan = Math.random() * particleLifeSpan + particleLifeSpan;
+            this.shrinkRate = this.size / this.particleLifeSpan;
         }
         this.draw();
     }
 }
 
-// create particle array
 function init() {
     particlesArray = [];
     for (let i = 0; i < particleAmount; i++) {
@@ -66,7 +62,6 @@ function init() {
     }
 }
 
-// animate particles
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < particlesArray.length; i++) {
@@ -79,10 +74,9 @@ init();
 animate();
 
 window.addEventListener('resize', function() {
-    // Update the canvas size
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Reinitialize particles
     init();
 });

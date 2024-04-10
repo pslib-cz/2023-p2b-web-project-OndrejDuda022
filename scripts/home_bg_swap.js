@@ -1,7 +1,8 @@
-const images = ['./images/backgrounds/landscape_2.png', 
-                './images/backgrounds/landscape_3.png',
-                './images/backgrounds/castle_1.png',
-                './images/backgrounds/landscape_1.png',
+const images = ['./images/webp/backgrounds/landscape_2.webp', 
+                './images/webp/backgrounds/landscape_3.webp',
+                './images/webp/backgrounds/landscape_4.webp',
+                './images/webp/backgrounds/castle_1.webp',
+                './images/webp/backgrounds/landscape_1.webp',
 ];
 
 images.forEach(image => {

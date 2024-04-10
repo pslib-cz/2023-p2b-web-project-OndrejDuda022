@@ -86,7 +86,7 @@
 /*-----------------------*/
 
 #home-header{
-    background-image: url(../images/backgrounds/landscape_1.png);
+    background-image: url(../images/webp/backgrounds/landscape_1.webp);
     height: 300px;
     transition: background 2s ease-in-out;
     background-position: center top;
@@ -502,7 +502,7 @@
 /*-----------------------*/
 
 #malachai-body{
-    background-image: url(../images/backgrounds/forest_3.png);
+    background-image: url(../images/webp/backgrounds/forest_3.webp);
 }
 
 /*-----------------------*/
@@ -541,19 +541,19 @@
 /*-----------------------*/
 
 #geo-body{
-    background-image: url(../images/backgrounds/mountain_2.png);
+    background-image: url(../images/webp/backgrounds/mountain_2.webp);
 }
 
 /*-----------------------*/
 
 #gallery-body{
-    background-image: url(../images/backgrounds/wall_5.png);
+    background-image: url(../images/webp/backgrounds/wall_5.webp);
 }
 
 /*-----------------------*/
 
 #login-body{
-    background-image: url(../images/backgrounds/wall_2.png);
+    background-image: url(../images/webp/backgrounds/wall_2.webp);
     padding-bottom: 50px;
 }
 
