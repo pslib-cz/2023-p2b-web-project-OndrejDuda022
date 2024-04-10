@@ -852,23 +852,23 @@
     color: var(--royal-silver);
 }
 
-#geography-content .page-content__container:nth-of-type(4) p:first-of-type{
+#geography-content .page-content__container:nth-of-type(3) p:first-of-type{
     color: var(--royal-silver);
 }
 
-#geography-content .page-content__container:nth-of-type(4) p:nth-of-type(2){
+#geography-content .page-content__container:nth-of-type(3) p:nth-of-type(2){
     color: var(--forest-green);
 }
 
-#geography-content .page-content__container:nth-of-type(4) p:last-of-type{
+#geography-content .page-content__container:nth-of-type(3) p:last-of-type{
     color: var(--beast-yellow);
 }
 
-#geography-content .page-content__container:nth-of-type(4) p span{
+#geography-content .page-content__container:nth-of-type(3) p span{
     color: var(--silver);
 }
 
-#geography-content .page-content__container:nth-of-type(5) p::before, #geography-content .page-content__container:nth-of-type(6) p::before{
+#geography-content .page-content__container:nth-of-type(4) p::before, #geography-content .page-content__container:nth-of-type(5) p::before{
     content: '○ ';
 }
 

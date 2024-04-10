@@ -1,8 +1,11 @@
 @media screen and (min-width: 900px) {
-    #malachai-content{
+    #malachai-content, #geography-content{
         grid-template-columns: 30% 30% 30%;
         justify-content: center;
         align-items: center;
+    }
+
+    #malachai-content{
         grid-template-areas: 'title title title' 
                              'species species image' 
                              'magic magic image' 
@@ -10,13 +13,20 @@
                              'titles incompetencies image';
     }
 
-    #malachai-content h2{
+    #geography-content{
+        grid-template-areas: 'title title title' 
+                             'data population image' 
+                             'geography climate image' 
+                             'neighbours other image';
+    }
+
+    #malachai-content h2, #geography-content h2{
         grid-area: title;
         text-align: center;
         font-size: 2rem;
     }
 
-    #malachai-content h2::after{
+    #malachai-content h2::after, #geography-content h2::after{
         content: url('../images/svg/underline.svg');
         display: block;
         width: 40%;
@@ -49,7 +59,29 @@
         grid-area: incompetencies;
     }
 
-    #malachai-portrait{
+    
+    #geography-content .page-content__container:nth-of-type(1){
+        grid-area: data;
+    }
+    
+    #geography-content .page-content__container:nth-of-type(3){
+        grid-area: population;
+    }
+
+    #geography-content .page-content__container:nth-of-type(5){
+        grid-area: geography;
+    }
+
+    #geography-content .page-content__container:nth-of-type(4){
+        grid-area: climate;
+    }
+
+    #geography-content .page-content__container:nth-of-type(2){
+        grid-area: neighbours;
+    }
+    
+
+    #malachai-portrait, #geography-map{
         grid-area: image;
         position: initial;
         opacity: 1;
@@ -59,9 +91,14 @@
         justify-self: center;
     }
 
+    #geography-map{
+        max-width: 100%;
+    }
+
     .image-swap{
         display: none;
     }
+
 }
 
 @media screen and (min-width: 1200px){
@@ -211,7 +248,7 @@
         grid-area: title;
     }
 
-    #malachai-content{
+    #malachai-content, #geography-content{
         grid-template-columns: 1fr 1fr 1fr;
         padding: 20px 15%;
     }
@@ -253,11 +290,6 @@
         rotate: 180deg;
     }
 
-    #malachai-content{
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 20px 25%;
-    }
-
     .page-content__container h3{
         font-size: 1.4rem;}
 
@@ -265,6 +297,19 @@
         font-size: 1.3em;
     }
 }
+
+/*
+@media screen and (min-width: 1700px) {
+    
+    
+    #malachai-content, #geography-content{
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 20px 25%;
+    }
+    
+}
+
+*/
 
 @media screen and (max-width: 500px){
     .main-text h1{
