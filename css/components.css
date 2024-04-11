@@ -174,19 +174,26 @@
         animation: logo__stab 2s ease;
     }
 
-    .home-main__logo img:nth-child(2){
+    #logo-sword{
         position: absolute;
         top: 5%;
         left: 50%;
         transform: translateX(-50%);
-        pointer-events: none;
         animation: sword__load 2s ease;
         transition: 0.2s;
         height: 100%;
     }
 
-    .home-main__logo:hover img:nth-child(2){
+    .home-main__logo:hover #logo-sword{
         transform: translateX(-50%) translateY(-20px);
+    }
+
+    .home-main__logo.active #logo-sword{
+        transform: translateX(-50%) translateY(-20px) rotate(180deg);
+    }
+
+    .home-main__logo.active:hover #logo-sword{
+        transform: translateX(-50%) translateY(-40px) rotate(180deg);
     }
 
 
