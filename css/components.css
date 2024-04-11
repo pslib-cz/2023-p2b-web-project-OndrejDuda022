@@ -52,19 +52,19 @@
 }
 
 /*BODIES*/
-#malachai-body{
+.page-body--malachai{
     background-image: url(../images/webp/backgrounds/forest_3.webp);
 }
 
-#geo-body{
+.page-body--geo{
     background-image: url(../images/webp/backgrounds/mountain_2.webp);
 }
 
-#gallery-body{
+.page-body--gallery{
     background-image: url(../images/webp/backgrounds/wall_5.webp);
 }
 
-#login-body{
+.page-body--login{
     background-image: url(../images/webp/backgrounds/wall_2.webp);
     padding-bottom: 50px;
 }
@@ -105,11 +105,11 @@
         margin-left: 5px;
     }
 
-#home-footer{
+.main-footer--home{
     background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--essence-dark));
 }
 
-#malachai-footer{
+.main-footer--malachai{
     background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--essence));
 }
 
@@ -121,7 +121,7 @@
     background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--royal-silver));
 }
 
-.idle-footer{
+.main-footer--idle{
     background: linear-gradient(rgba(0, 0, 0, 0.8) 80%, var(--silver));
 }
 
@@ -190,28 +190,28 @@
     }
 
 
-.home-main__text{
+.home-body__main__text{
     padding: 0 10%;
     animation: load__down 1s ease;
 }
 
-    .home-main__text h1{
+    .home-body__main__text h1{
         font-size: 2rem;
         text-align: center;
     }
 
-    .home-main__text h1::after, .home-main__text h1::before{
+    .home-body__main__text h1::after, .home-body__main__text h1::before{
         content: url('../images/svg/underline_2.svg');
         display: block;
     }
 
-    .home-main__text h1::before{
+    .home-body__main__text h1::before{
         width: calc(100% + 50px);
         rotate: 180deg;
         transform: translateX(25px);
     }
 
-    .home-main__text p{
+    .home-body__main__text p{
         font-size: 1.5em;
         text-align: center;
     }
@@ -277,7 +277,7 @@
     }
 
 
-.sub-menu {
+.sub-menu--home {
     opacity: 0;
     pointer-events: none;
     position: absolute;
@@ -292,30 +292,30 @@
     z-index: 1;
 }
 
-    .home-body__main__nav:first-of-type .sub-menu{
+    .home-body__main__nav:first-of-type .sub-menu--home{
         border-right: 1px solid var(--silver);
         border-radius: 15px 0 15px 15px;
         right: 100%;
     }
 
-    .home-body__main__nav:last-of-type .sub-menu{
+    .home-body__main__nav:last-of-type .sub-menu--home{
         border-left: 1px solid var(--silver);
         border-radius: 0 15px 15px 15px;
         left: 100%;
     }
 
-    .sub-menu a{
+    .sub-menu--home a{
         padding: 5px;
         display: inline-block;
     }
 
-    .sub-menu a:hover{
+    .sub-menu--home a:hover{
         background-color: var(--obsidian);
         color: var(--essence);
         border-radius: 5px;
     }
 
-    .home-body__main__nav li:has(p):hover .sub-menu {
+    .home-body__main__nav li:has(p):hover .sub-menu--home {
         opacity: 1;
         pointer-events: all;
     }
@@ -333,7 +333,7 @@
 
 /*NORMAL PAGE*/
 
-.page-header{
+.page-body__header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -346,7 +346,7 @@
     z-index: 1;
 }
 
-    .page-header span, .login-header span{
+    .page-body__header span, .page-body__header--login span{
         font-size: 1.2em;
     }
 
@@ -358,7 +358,7 @@
 }
 
 
-.page-header__menu{
+.page-nav--mobile menu{
     position: absolute;
     width: 45%;
     max-width: 250px;
@@ -373,21 +373,25 @@
     transition: 0.5s ease-in-out;
 }
 
-    .page-header:has(.menu-activator.active) .page-header__menu{
+    .page-body__header:has(.menu-activator.active) .page-nav--mobile menu{
         top:0;
     }
 
-    .page-header:has(.menu-activator.active) .menu-cap img:first-of-type{
+    .page-body__header:has(.menu-activator.active) .header-cap img:first-of-type{
         top:var(--menu-height); 
     }
 
-    .page-header:has(.menu-activator.active) .menu-cap img:last-of-type{
+    .page-body__header:has(.menu-activator.active) .header-cap img:last-of-type{
         top: calc(var(--menu-height) + 10px);
         rotate: 540deg;
     }
 
+    .page-body__header:has(.menu-activator.active) .header-cap a{
+        display: none;
+    }
 
-    .menu-cap img:first-of-type{
+
+    .header-cap img:first-of-type{
         position: absolute;
         top: 0;
         max-width: 250px;
@@ -397,7 +401,7 @@
         transition: 0.5s ease-in-out;
     }
 
-    .menu-cap img:last-of-type{
+    .header-cap img:last-of-type{
         position: absolute;
         top: 10px;
         width: 10%;
@@ -410,7 +414,7 @@
         z-index: 1;
     }
 
-    .menu-cap a{
+    .header-cap a{
         width: var(--crown-width);
         aspect-ratio: 1/1;
         position: absolute;
@@ -421,21 +425,17 @@
         z-index: 2;
     }
 
-    .page-header:has(.menu-activator.active) .menu-cap a{
-        display: none;
-    }
 
-
-.page-header__menu li:not(.sub-li){
+.page-nav--mobile menu li:not(.sub-li--mobile){
     padding: 5px;
     font-size: 1.2em;
 }
 
-    .page-header__menu li:not(:has(p)):hover{
+    .page-nav--mobile menu li:not(:has(p)):hover{
         background-color: var(--obsidian-light);
     }
 
-    .page-header__menu li:not(:has(p)):hover a{
+    .page-nav--mobile menu li:not(:has(p)):hover a{
         color: var(--essence);
     }
 
@@ -449,51 +449,51 @@
     }
 
 
-.sub-li{
+.sub-li--mobile{
     padding: 0 5px;
     margin-left: 5px;
     font-size: 0.8em;
 }
 
-    .sub-li::before{
+    .sub-li--mobile::before{
         content: '○';
         margin-right: 5px;
     }
 
-    .page-header__menu li:has(p) p{
+    .page-nav--mobile menu li:has(p) p{
         font-weight: bold;
     }
 
 
-.desktop-nav{
+.page-nav--desktop{
     display: none;
     width: 30%;
 }
 
-    .desktop-nav menu{
+    .page-nav--desktop menu{
         display: none;
         justify-content: space-between;
         list-style: none;
     }
 
-    .desktop-nav li{
+    .page-nav--desktop li{
         font-size: 1.5em;
         padding: 30px 50px;
     }
 
-    .desktop-nav li:not(:has(p)):hover{
+    .page-nav--desktop li:not(:has(p)):hover{
         background-color: var(--obsidian-trans-dark);
     }
 
-    .desktop-nav li:not(:has(p)):hover a{
+    .page-nav--desktop li:not(:has(p)):hover a{
         color: var(--essence);
     }
 
-    .desktop-nav li:has(p){
+    .page-nav--desktop li:has(p){
         position: relative;
     }
 
-    .desktop-nav li:has(p)::after{
+    .page-nav--desktop li:has(p)::after{
         content: '▼';
         text-align: center;
         width: 30px;
@@ -502,11 +502,11 @@
         right: calc(50% - 15px);
     }
 
-    .desktop-nav li:has(p):hover::after{
+    .page-nav--desktop li:has(p):hover::after{
         color: var(--essence);
     }
 
-.page-sub-menu{
+.sub-menu--page{
     opacity: 0;
     pointer-events: none;
     position: absolute;
@@ -523,25 +523,25 @@
     padding: 10px;
 }
 
-    .desktop-nav li:has(p):hover .page-sub-menu{
+    .page-nav--desktop li:has(p):hover .sub-menu--page{
         opacity: 1;
         pointer-events: all;
     }
 
-    .page-sub-menu a{
+    .sub-menu--page a{
         padding: 5px;
         font-size: .8em;
         display: inline-block;
     }
 
-    .page-sub-menu a:hover{
+    .sub-menu--page a:hover{
         background-color: var(--obsidian-trans-dark);
         border-radius: 10px;
         color: var(--essence);
     }
 
 
-.page-main {
+.page-body__main {
     margin-bottom: 50px;
     animation: load__down 2s ease;
 }
@@ -573,7 +573,7 @@
     }
 
 
-.main-text{
+.page-body__main__text{
     grid-area: header;
     text-align: center;
     padding-left: 5%;
@@ -581,28 +581,28 @@
     margin-bottom: 5%;
 }
 
-    .main-text h1::after, .main-text h1::before{
+    .page-body__main__text h1::after, .page-body__main__text h1::before{
         display: block;
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .main-text h1::after{
+    .page-body__main__text h1::after{
         content: url('../images/svg/underline_3.svg');
     }
 
-    .main-text h1::before{
+    .page-body__main__text h1::before{
         content: url('../images/svg/underline_3.svg');
     }
 
-    .main-text p{
+    .page-body__main__text p{
         font-size: 1.5em;
     }
 
 /*LOGIN PAGE*/
 
-.login-header{
+.page-body__header--login{
     display: block;
     padding: 20px;
     position: relative;
@@ -611,7 +611,7 @@
     animation: load__up 2s ease;
 }
 
-.login-header__cap img:first-of-type{
+.header-cap--login img:first-of-type{
     position: absolute;
     top: 0;
     max-width: 250px;
@@ -621,7 +621,7 @@
     transition: 0.5s ease-in-out;
 }
 
-.login-header__cap img:last-of-type{
+.header-cap--login img:last-of-type{
     position: absolute;
     top: 10px;
     width: 10%;
@@ -635,7 +635,7 @@
 }
 
 
-.login-main {
+.page-body__main--login {
     display: flex;
     justify-content: center;
     background-color: var(--obsidian-trans);
@@ -730,11 +730,11 @@
 }
 
 
-#gallery-content h2{
+.page-content--gallery h2{
     text-align: center;
 }
 
-    #gallery-content h2::after{
+    .page-content--gallery h2::after{
         content: url('../images/svg/underline_1.svg');
         display: block;
         margin-left: auto;
@@ -742,11 +742,11 @@
         max-width: 400px;
     }
 
-    #gallery-content figure {
+    .page-content--gallery figure {
         position: relative;
     }
 
-        #gallery-content figure div {
+        .page-content--gallery figure div {
             position: absolute;
             right: 0;
             left: 0;
@@ -757,7 +757,7 @@
             justify-content: space-between;
         }
 
-            #gallery-content figure div span {
+            .page-content--gallery figure div span {
                 padding: 5px;
                 text-align: center;
             }
@@ -765,22 +765,22 @@
 
 /* MALACHAI PAGE */
 
-#malachai-species__graph{
+.grid-graph--malachai-species{
     grid-template-columns: 74% 22% 4%;
 }
 
-    #malachai-species__graph div:nth-of-type(1){
+    .grid-graph--malachai-species div:nth-of-type(1){
         background: radial-gradient(circle at center, var(--essence-light) 60%, var(--essence) 100%);
         /*background-color: var(--essence);*/
         border-right: 1px solid var(--silver-dark);
     }
 
-    #malachai-species__graph div:nth-of-type(2){
+    .grid-graph--malachai-species div:nth-of-type(2){
         background-color: var(--royal-silver);
         border-right: 1px solid var(--silver-dark);
     }
 
-    #malachai-species__graph div:nth-of-type(3){
+    .grid-graph--malachai-species div:nth-of-type(3){
         background-color: var(--misty-violet);
     }
 
@@ -810,16 +810,16 @@
     color: var(--silver);
 }
 
-#malachai-content .page-content__container h3 span, #geography-content .page-content__container h3 span{
+.page-content--malachai .page-content__container h3 span, .page-content--geography .page-content__container h3 span{
     font-weight: lighter;
 }
 
 
-#malachai-magic__graph{
+.grid-graph--malachai-magic{
     grid-template-columns: 90% 10%;
 }
 
-    #malachai-magic__graph div:first-of-type{
+    .grid-graph--malachai-magic div:first-of-type{
         background: linear-gradient(90deg, var(--void) 50%, var(--black) 100%);
         border-radius: 0 10px 10px 0;
     }
@@ -834,7 +834,7 @@
 }
 
 
-#malachai-portrait{
+.page-content__portrait{
     position: absolute;
     height: 100%;
     left: 50%;
@@ -845,71 +845,74 @@
 }
 
 
-#malachai-content:has(.image-swap.active) #malachai-portrait{
+.page-content--malachai:has(.image-swap.active) .page-content__portrait{
     opacity: 1;
     pointer-events: all;
 }
 
-#malachai-content:has(.image-swap.active) .page-content__container{
+.page-content--malachai:has(.image-swap.active) .page-content__container{
     opacity: 0;
     pointer-events: none;
 }
 
 /* GEOGRAPHY PAGE */
+.page-content--geography{
+    padding-bottom: 50px;
+}
 
-#geography-population__graph{
+.grid-graph--geography-population{
     grid-template-columns: 90% 6% 4%;
 }
 
-    #geography-population__graph div:nth-of-type(1){
+    .grid-graph--geography-population div:nth-of-type(1){
         background-color: var(--royal-silver);
         border-right: 1px solid var(--silver-dark);
     }
 
-    #geography-population__graph div:nth-of-type(2){
+    .grid-graph--geography-population div:nth-of-type(2){
         background-color: var(--forest-green);
         border-right: 1px solid var(--silver-dark);
     }
 
-    #geography-population__graph div:nth-of-type(3){
+    .grid-graph--geography-population div:nth-of-type(3){
         background-color: var(--beast-yellow);
     }
 
 
-#geography-content #geography-neighbours p:first-of-type span{
+.page-content--geography #geography-neighbours p:first-of-type span{
     color: var(--rose-crimson);
 }
 
-#geography-content #geography-neighbours p:nth-of-type(2) span{
+.page-content--geography #geography-neighbours p:nth-of-type(2) span{
     color: var(--forest-green);
 }
 
-#geography-content #geography-neighbours p:not(:has(span)){
+.page-content--geography #geography-neighbours p:not(:has(span)){
     color: var(--royal-silver);
 }
 
-#geography-content #geography-population p:first-of-type{
+.page-content--geography #geography-population p:first-of-type{
     color: var(--royal-silver);
 }
 
-#geography-content #geography-population p:nth-of-type(2){
+.page-content--geography #geography-population p:nth-of-type(2){
     color: var(--forest-green);
 }
 
-#geography-content #geography-population p:last-of-type{
+.page-content--geography #geography-population p:last-of-type{
     color: var(--beast-yellow);
 }
 
-#geography-content #geography-population p span{
+.page-content--geography #geography-population p span{
     color: var(--silver);
 }
 
-#geography-content #geography-landscape p::before, #geography-content #geography-climate p::before{
+.page-content--geography #geography-landscape p::before, .page-content--geography #geography-climate p::before{
     content: '○ ';
 }
 
 
-#geography-map{
+.page-content__portrait--map{
     position: absolute;
     top: 10%;
     left: 50%;
@@ -919,12 +922,12 @@
     transition: .2s;
 }
 
-#geography-content:has(.image-swap.active) #geography-map{
+.page-content--geography:has(.image-swap.active) .page-content__portrait--map{
     opacity: 1;
     pointer-events: all;
 }
 
-#geography-content:has(.image-swap.active) .page-content__container{
+.page-content--geography:has(.image-swap.active) .page-content__container{
     opacity: 0;
     pointer-events: none;
 }

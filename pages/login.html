@@ -12,29 +12,29 @@
     <link rel="stylesheet" href="../css/keyframes.css">
     <script>
         window.onload = function() {
-            document.getElementById('loginForm').addEventListener('submit', function(event) {
+            document.getElementById('login-form--mockup').addEventListener('submit', function(event) {
                 event.preventDefault();
                 window.location.href = '../index.html';
             });
         };
     </script>
 </head>
-<body class="page-body" id="login-body">
+<body class="page-body page-body--login">
     <div class="center-line"></div>
-    <header class="login-header">
+    <header class="page-body__header--login">
         <span>Login</span>
-        <div class="login-header__cap">
+        <div class="header-cap--login">
             <img src="../images/svg/triangle_solid.svg" alt="menu_top">
             <img src="../images/webp/obsidian_crown.webp" alt="crown">
         </div>
     </header>
-    <main class="login-main">
+    <main class="page-body__main--login">
         <div class="login-window">
             <h1>Enter the Kingdom</h1>
             <img src="../images/svg/underline_3.svg" alt="top">
                 <div class="login-window__grid">
                     <p>You shall not pass. Yet.</p>
-                    <form id="loginForm" action="#" method="post">
+                    <form id="login-form--mockup" action="#" method="post">
                         <label for="username">Username:</label>
                         <input type="text" id="username" name="username" required>
                         <label for="password">Password:</label>
@@ -45,7 +45,7 @@
             <img src="../images/svg/underline_3.svg" alt="bottom">
         </div>
     </main>
-    <footer class="main-footer idle-footer">
+    <footer class="main-footer main-footer--idle">
         <a href="https://github.com/pslib-cz/2023-p2b-web-project-OndrejDuda022" id="gallery-repo">Repositary</a>
     </footer>
 </body>

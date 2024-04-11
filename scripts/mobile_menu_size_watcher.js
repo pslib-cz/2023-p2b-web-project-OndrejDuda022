@@ -1,6 +1,6 @@
 function updateDimensions() {
-    const menuElement = document.querySelector('.page-header__menu');
-    const imgElement = document.querySelector('.menu-cap img:last-of-type');
+    const menuElement = document.querySelector('.page-nav--mobile menu');
+    const imgElement = document.querySelector('.header-cap img:last-of-type');
     
     const menuHeight = menuElement.offsetHeight;
     const menuWidth = menuElement.offsetWidth;

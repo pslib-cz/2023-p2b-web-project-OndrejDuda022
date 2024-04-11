@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../css/keyframes.css">
 </head>
-<body class="page-body" id="geo-body">
+<body class="page-body page-body--geo">
     <div class="center-line"></div>
-    <header class="page-header">
+    <header class="page-body__header">
         <span>Geography</span>
-        <nav class="desktop-nav">
+        <nav class="page-nav--desktop">
             <menu>
                 <li><a href="#">About</a></li>
                 <li>
                     <p>Royality<p>
-                    <div class="page-sub-menu">
+                    <div class="sub-menu--page">
                         <a href="#">King Roderic Obsidianthorn II.</a>
                         <a href="#">Lady Elani Misthriver</a>
                         <a href="./malachai.html">Prince Malachai Obsidianthorn I.</a>
@@ -29,32 +29,32 @@
                 <li><a href="#">History</a></li>
             </menu>
         </nav>
-        <nav class="mobile-nav">
-            <menu class="page-header__menu">
+        <nav class="page-nav--mobile">
+            <menu>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><p>Royality</p></li>
-                <li class="sub-li"><a href="#">King Roderic Obsidianthorn II.</a></li>
-                <li class="sub-li"><a href="#">Lady Elani Misthriver</a></li>
-                <li class="sub-li"><a href="./malachai.html">Prince Malachai Obsidianthorn I.</a></li>
+                <li class="sub-li--mobile"><a href="#">King Roderic Obsidianthorn II.</a></li>
+                <li class="sub-li--mobile"><a href="#">Lady Elani Misthriver</a></li>
+                <li class="sub-li--mobile"><a href="./malachai.html">Prince Malachai Obsidianthorn I.</a></li>
                 <li><a href="#">History</a></li>
                 <li><p>Species</p></li>
-                <li class="sub-li"><a href="#">Humans</a></li>
-                <li class="sub-li"><a href="#">Faeries</a></li>
-                <li class="sub-li"><a href="#">Beastman</a></li>
+                <li class="sub-li--mobile"><a href="#">Humans</a></li>
+                <li class="sub-li--mobile"><a href="#">Faeries</a></li>
+                <li class="sub-li--mobile"><a href="#">Beastman</a></li>
                 <li><a href="#">Other</a></li>
             </menu>
-            <div class="menu-cap">
+            <div class="header-cap">
                 <a href="../index.html"></a>
                 <img src="../images/svg/triangle_solid.svg" alt="menu_top">
                 <img src="../images/webp/obsidian_crown.webp" alt="crown">
             </div>
         </nav>
-        <nav class="desktop-nav">
+        <nav class="page-nav--desktop">
             <menu>
                 <li>
                     <p>Species</p>
-                    <div class="page-sub-menu">
+                    <div class="sub-menu--page">
                         <a href="#">Humans</a>
                         <a href="#">Faeries</a>
                         <a href="#">Beastman</a>
@@ -68,11 +68,11 @@
             <span>Menu</span>
         </div>
     </header>
-    <main class="page-main">
-        <div class="main-text">
+    <main class="page-body__main">
+        <div class="page-body__main__text">
             <h1>Geography</h1>
         </div>
-        <div class="page-content" id="geography-content">
+        <div class="page-content page-content--geography">
             <h2>Lore</h2>
             <div class="page-content__container" id="geography-data">
                 <h3>Location: <span>West of the Known world</span></h3>
@@ -89,7 +89,7 @@
             </div>
             <div class="page-content__container" id="geography-population">
                 <h3>Population:</h3>
-                <div class="grid-graph" id="geography-population__graph">
+                <div class="grid-graph grid-graph--geography-population">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -110,11 +110,11 @@
                 <p>Harsh winters - snowy, cloudy, windy</p>
                 <p>Wet springs, autumns - dense rains, thick fogs, strong winds</p>
             </div>
-            <img id="geography-map" src="../images/webp/map.webp" alt="Map">
+            <img class="page-content__portrait--map" src="../images/webp/map.webp" alt="Map">
             <img class="image-swap" src="../images/svg/gallery.svg" alt="image_swap">
         </div>
     </main>
-    <footer class="main-footer idle-footer">
+    <footer class="main-footer main-footer--idle">
         <a href="https://github.com/pslib-cz/2023-p2b-web-project-OndrejDuda022">Repositary</a>
         <a href="./gallery.html">Gallery</a>
     </footer>
