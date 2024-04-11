@@ -207,6 +207,14 @@
         background-color: var(--obsidian-trans);
     }
 
+    .home-main__logo.active #logo-sword{
+        transform: translateX(-50%) translateY(-20px) rotate(180deg);
+    }
+
+    .home-main__logo.active:hover #logo-sword{
+        transform: translateX(-50%) translateY(-40px) rotate(180deg);
+    }
+
 
     /* Login */
     .login-window {
