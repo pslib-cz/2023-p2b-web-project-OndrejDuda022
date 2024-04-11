@@ -180,6 +180,7 @@
         left: 50%;
         transform: translateX(-50%);
         animation: sword__load 2s ease;
+        pointer-events: none;
         transition: 0.2s;
         height: 100%;
     }
