@@ -27,7 +27,7 @@
     pointer-events: none;
 }
 
-#login-button {
+.login-button {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -127,7 +127,7 @@
 
 /*HOME PAGE*/
 
-#home-header{
+.home-body__header{
     background-image: url(../images/webp/backgrounds/landscape_1.webp);
     height: 300px;
     transition: background 2s ease-in-out;
@@ -136,7 +136,7 @@
 }
 
 
-#home-main{
+.home-body__main{
     border-top: 2px solid var(--silver);
     display: grid;
     gap: 10px;
@@ -147,7 +147,7 @@
     padding-bottom: 50px;
 }
 
-    #home-main > img:first-child{
+    .home-body__main > img:first-child{
         position: absolute;
         width: 80%;
         max-width: 800px;
@@ -158,7 +158,7 @@
     }
 
 
-.home-main__logo{
+.main-logo{
     width: 60%;
     aspect-ratio: 1/1;
     min-width: 200px;
@@ -168,13 +168,13 @@
     animation: load__static 1s ease;
 }
 
-    .home-main__logo img:first-child{
+    .main-logo img:first-child{
         border-radius: 50%;
         border: 2px solid var(--silver);
         animation: logo__stab 2s ease;
     }
 
-    #logo-sword{
+    .main-logo__sword{
         position: absolute;
         top: 5%;
         left: 50%;
@@ -185,7 +185,7 @@
         height: 100%;
     }
 
-    .home-main__logo:hover #logo-sword{
+    .main-logo:hover .main-logo__sword{
         transform: translateX(-50%) translateY(-20px);
     }
 
@@ -217,7 +217,7 @@
     }
 
 
-.home-main__nav menu{
+.home-body__main__nav menu{
     display: flex;
     gap: 5px;
     padding: 0;
@@ -226,21 +226,21 @@
     align-items: center;
 }
 
-    .home-main__nav:first-of-type menu{
+    .home-body__main__nav:first-of-type menu{
         animation: load__left 2s ease;
     }
 
-    .home-main__nav:last-of-type menu{
+    .home-body__main__nav:last-of-type menu{
         animation: load__right 2s ease;
     }
 
 
-    .home-main__nav li{
+    .home-body__main__nav li{
         padding: 10px;
         transition: 0.2s;
     }
 
-    .home-main__nav li::after{
+    .home-body__main__nav li::after{
         content: '';
         display: block;
         border-bottom: 3px double var(--silver);
@@ -248,31 +248,31 @@
         width: 100%;
     }
 
-    .home-main__nav li {
+    .home-body__main__nav li {
         border-radius: 15px;
     }
 
-    .home-main__nav li:not(:has(p)):hover, .home-main__nav li:has(p):hover{
+    .home-body__main__nav li:not(:has(p)):hover, .home-body__main__nav li:has(p):hover{
         background-color: var(--obsidian-light);
     }
 
-    .home-main__nav li:not(:has(p)):hover a{
+    .home-body__main__nav li:not(:has(p)):hover a{
         color: var(--essence);
     }
 
-    .home-main__nav li:has(p):hover p::before, .home-main__nav li:has(p):hover p::after{
+    .home-body__main__nav li:has(p):hover p::before, .home-body__main__nav li:has(p):hover p::after{
         color: var(--essence);
     }
 
-    .home-main__nav li:has(p){
+    .home-body__main__nav li:has(p){
         position: relative;
     }
 
-    .home-main__nav:first-of-type li:has(p){
+    .home-body__main__nav:first-of-type li:has(p){
         border-radius: 0 15px 15px 0;
     }
 
-    .home-main__nav:last-of-type li:has(p){
+    .home-body__main__nav:last-of-type li:has(p){
         border-radius: 15px 0 0 15px;
     }
 
@@ -292,13 +292,13 @@
     z-index: 1;
 }
 
-    .home-main__nav:first-of-type .sub-menu{
+    .home-body__main__nav:first-of-type .sub-menu{
         border-right: 1px solid var(--silver);
         border-radius: 15px 0 15px 15px;
         right: 100%;
     }
 
-    .home-main__nav:last-of-type .sub-menu{
+    .home-body__main__nav:last-of-type .sub-menu{
         border-left: 1px solid var(--silver);
         border-radius: 0 15px 15px 15px;
         left: 100%;
@@ -315,18 +315,18 @@
         border-radius: 5px;
     }
 
-    .home-main__nav li:has(p):hover .sub-menu {
+    .home-body__main__nav li:has(p):hover .sub-menu {
         opacity: 1;
         pointer-events: all;
     }
 
 
-.home-main__nav:first-of-type menu li:has(p) p::before {
+.home-body__main__nav:first-of-type menu li:has(p) p::before {
     content: '<';
     margin-right: 5px;
 }
 
-.home-main__nav:last-of-type menu li:has(p) p::after {
+.home-body__main__nav:last-of-type menu li:has(p) p::after {
     content: '>';
     margin-left: 5px;
 }

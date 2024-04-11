@@ -16,6 +16,6 @@ setInterval(
     function() 
     {
         const imageUrl = 'url(' + images[index] + ')';
-        document.getElementById('home-header').style.backgroundImage = imageUrl;
+        document.querySelector('.home-body__header').style.backgroundImage = imageUrl;
         index = (index + 1) % images.length;
     }, speed * 1000);

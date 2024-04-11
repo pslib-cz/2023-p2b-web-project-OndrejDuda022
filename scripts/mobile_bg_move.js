@@ -1,4 +1,4 @@
-document.getElementById('home-header').addEventListener('mousemove', function(e) {
+document.querySelector('.home-body__header').addEventListener('mousemove', function(e) {
     const rect = e.target.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const width = rect.right - rect.left;

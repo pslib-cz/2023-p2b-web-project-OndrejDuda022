@@ -117,7 +117,7 @@
 @media screen and (min-width: 1200px){
 
     /* Home */
-    #home-header{
+    .home-body__header{
         height: 45vh;
         background-position: center;
     }
@@ -146,55 +146,55 @@
     }
 
 
-    .home-main__nav{
+    .home-body__main__nav{
         top: -250px;
     }
 
-    .home-main__nav:first-of-type{
+    .home-body__main__nav:first-of-type{
         position: absolute;
         left: calc(50% - 350px);
     }
 
-    .home-main__nav:last-of-type{
+    .home-body__main__nav:last-of-type{
         position: absolute;
         right: calc(50% - 350px);
     }
 
-    .home-main__nav menu{
+    .home-body__main__nav menu{
         flex-direction: column;
         gap: 20px;
         height: 250px;
     }
 
-    .home-main__nav:first-of-type li:first-child{
+    .home-body__main__nav:first-of-type li:first-child{
         transform: translateX(40px);
     }
 
-    .home-main__nav:first-of-type li:nth-child(2){
+    .home-body__main__nav:first-of-type li:nth-child(2){
         transform: translateX(-20px);
     }
 
-    .home-main__nav:first-of-type li:last-child{
+    .home-body__main__nav:first-of-type li:last-child{
         transform: translateX(-30px) translateY(10px);
     }
 
-    .home-main__nav:last-of-type li:first-child{
+    .home-body__main__nav:last-of-type li:first-child{
         transform: translateX(-40px);
     }
 
-    .home-main__nav:last-of-type li:nth-child(2){
+    .home-body__main__nav:last-of-type li:nth-child(2){
         transform: translateX(20px);
     }
 
-    .home-main__nav:last-of-type li:last-child{
+    .home-body__main__nav:last-of-type li:last-child{
         transform: translateX(30px) translateY(10px);
     }
 
-    .home-main__nav li{
+    .home-body__main__nav li{
         padding: 15px;
     }
 
-    .home-main__nav li a, .home-main__nav li p{
+    .home-body__main__nav li a, .home-body__main__nav li p{
         font-size: 1.2em;
     }
 
@@ -203,15 +203,15 @@
         width: 200px;
     }
 
-    .home-main__nav li:not(:has(p)):hover, .home-main__nav li:has(p):hover{
+    .home-body__main__nav li:not(:has(p)):hover, .home-body__main__nav li:has(p):hover{
         background-color: var(--obsidian-trans);
     }
 
-    .home-main__logo.active #logo-sword{
+    .main-logo.active .main-logo__sword{
         transform: translateX(-50%) translateY(-20px) rotate(180deg);
     }
 
-    .home-main__logo.active:hover #logo-sword{
+    .main-logo.active:hover .main-logo__sword{
         transform: translateX(-50%) translateY(-40px) rotate(180deg);
     }
 
