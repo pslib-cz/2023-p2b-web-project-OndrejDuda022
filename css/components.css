@@ -62,6 +62,8 @@
 
 .page-body--gallery{
     background-image: url(../images/webp/backgrounds/wall_5.webp);
+    background-size: auto;
+    background-position: center top;
 }
 
 .page-body--login{
@@ -144,7 +146,7 @@
     /*grid-template-rows: 50% auto;*/ /*Nahrazeno JS*/
     justify-items: center;
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 190px;
 }
 
     .home-body__main > img:first-child{

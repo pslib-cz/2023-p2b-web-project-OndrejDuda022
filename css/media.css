@@ -229,6 +229,11 @@
 
 
     /* Gallery */
+    .page-body--gallery{
+        background-size: cover;
+    }
+
+
     .page-content--gallery{
         display: grid;
         grid-template-columns: 30% 70%;
