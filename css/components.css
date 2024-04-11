@@ -543,6 +543,7 @@
 
 .page-main {
     margin-bottom: 50px;
+    animation: load__down 2s ease;
 }
 
 
@@ -654,6 +655,7 @@
     border-left: 2px solid var(--silver);
     width: 80%;
     max-width: 400px;
+    animation: load__left 2s ease;
 }
 
     .login-window img{
@@ -707,6 +709,14 @@
     grid-template-columns: 1fr;
     padding: 10px;
     gap: 10px;
+}
+
+.thumbnails--land{
+    animation: load__left 2s ease;
+}
+
+.thumbnails--royal{
+    animation: load__right 2s ease;
 }
 
 .thumbnails--land figure{
