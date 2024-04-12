@@ -87,7 +87,7 @@
     }
     
 
-    .page-content__portrait, .page-content__portrait--map{
+    .page-content__portrait {
         grid-area: image;
         position: initial;
         opacity: 1;
