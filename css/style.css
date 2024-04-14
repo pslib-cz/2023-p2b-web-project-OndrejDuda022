@@ -1,5 +1,6 @@
 /*FONT IMPORT*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 /*COLOR VARIABLES*/
 :root{
@@ -51,7 +52,8 @@
 
 /*GENERAL SETUP*/
 html {
-    font-family: "Lora", serif;
+    font-family: "Lora", serif; /*Zkuste si najít bezpatkový fantasy font*/
+    /*font-family: "Dancing Script", cursive;*/
     color: var(--silver);
 }
 
