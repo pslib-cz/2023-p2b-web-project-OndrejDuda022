@@ -67,9 +67,9 @@
     <script src="./scripts/particle_draw.js"></script>
     <script>
         function updateRowHeight() {
-            var logo = document.querySelector('.main-logo');
-            var grid = document.querySelector('.home-body__main');
-            var logoHeight = logo.offsetHeight;
+            const logo = document.querySelector('.main-logo');
+            const grid = document.querySelector('.home-body__main');
+            const logoHeight = logo.offsetHeight;
             grid.style.gridTemplateRows = (logoHeight / 2) + "px auto";
         }
         window.onload = updateRowHeight;
