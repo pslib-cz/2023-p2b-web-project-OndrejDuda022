@@ -52,15 +52,15 @@
 
 /*GENERAL SETUP*/
 html {
-    font-family: "Lora", serif; /*Zkuste si najít bezpatkový fantasy font*/
-    /*font-family: "Dancing Script", cursive;*/
+    font-family: "Lora", serif; /*Zkuste si najít kvalitní bezpatkový fantasy font*/
+    /*font-family: "Dancing Script", cursive;*/ /*Tohle je bezpatkové (pravděpodobně), ale nelíbí se mi to*/
     color: var(--silver);
 }
 
 body {
     background: linear-gradient(var(--obsidian) 70%, var(--obsidian-light));
     min-width: 400px;
-    min-height: 100vh; /*Subject to discuss*/
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
 }

@@ -228,6 +228,10 @@
     align-items: center;
 }
 
+    .home-body__main__nav a{
+        display: inline-block;
+    }
+
     .home-body__main__nav:first-of-type menu{
         animation: load__left 2s ease;
     }
@@ -375,6 +379,10 @@
     transition: 0.5s ease-in-out;
 }
 
+    .page-nav--mobile a{
+        display: inline-block;
+    }
+
     .page-body__header:has(.menu-activator.active) .page-nav--mobile menu{
         top:0;
     }
@@ -417,6 +425,7 @@
     }
 
     .header-cap a{
+        display: inline-block;
         width: var(--crown-width);
         aspect-ratio: 1/1;
         position: absolute;
@@ -457,7 +466,7 @@
     font-size: 0.8em;
 }
 
-    .sub-li--mobile::before{
+    .sub-li--mobile a::before{
         content: '○';
         margin-right: 5px;
     }
@@ -476,6 +485,10 @@
         display: none;
         justify-content: space-between;
         list-style: none;
+    }
+
+    .page-nav--desktop a{
+        display: inline-block;
     }
 
     .page-nav--desktop li{

@@ -193,6 +193,7 @@
 
     .home-body__main__nav li a, .home-body__main__nav li p{
         font-size: 1.2em;
+        display: inline-block;
     }
 
 
